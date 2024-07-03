@@ -1,7 +1,7 @@
 {
   "name": "landing-page",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -45,5 +45,5 @@
     "postcss": "^8.4.39",
     "tailwindcss": "^3.4.4"
   },
-  "homepage": "https://akim42003.github.io/Landing-Page"
+  "homepage": "https://akim42003.github.io/Landing-Page/"
 }
