@@ -20,34 +20,58 @@ import resume from '../assets/resume.pdf';
 
 const Hero = () => {
   return (
-    <div className='text-white'>
-      <div className='max-w-[85%] mt-[200px] max-h-[100%] w-full h-700px mx-auto flex flex-row items-center'>
-        <img src={headshot} alt="Headshot" className='w-[25%] rounded-full ' />
-        <div className='w-2/3 flex flex-col items-center'>
-          <p className='md:text-5xl sm:text-4xl text-xl font-bold mx-[30px]'>Creative and Interdiciplinary Machine Learning and Software Solutions</p>
-          <p className='text-[#00df9a] font-bold p-2 mx-[30px]'>Hi I'm Alex! I enjoy creating purposeful and fun full-stack applications, machine-learning models, and electronics across a variety of disciplines. Check out some of my projects!</p>
-          <div className='flex space-x-4'>
-          <a href="#projects">
-              <button className='bg-[#00df9a] w-[200px] rounded-md font-medium my-6 py-3 text-black'>
-                View Projects
-              </button>
-            </a>
-            <a href={resume} target="_blank" rel="noopener noreferrer">
-              <button className='bg-[#00df9a] w-[200px] rounded-md font-medium my-6 py-3 text-black'>
-                Resume
-              </button>
-            </a>
+    <div className='text-white min-h-screen flex flex-col justify-center'>
+      <div className='max-w-7xl mx-auto px-6 py-20 mt-20'>
+        <div className='grid md:grid-cols-2 gap-12 items-center'>
+          <div className='animate-slide-in-left'>
+            <img 
+              src={headshot} 
+              alt="Alex Kim" 
+              className='w-80 h-80 rounded-full mx-auto glass-morphism p-2 hover-lift' 
+            />
+          </div>
+          <div className='animate-slide-in-right space-y-6'>
+            <h1 className='text-5xl md:text-6xl font-bold leading-tight'>
+              Creative & 
+              <span className='bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text text-transparent drop-shadow-lg'>
+                {' '}Interdisciplinary
+              </span>
+            </h1>
+            <h2 className='text-2xl md:text-3xl font-light text-gray-200'>
+              Machine Learning & Software Solutions
+            </h2>
+            <p className='text-lg text-gray-300 leading-relaxed max-w-lg'>
+              Hi I'm Alex! I enjoy building things with data, sports, and math. 
+              I create purposeful full-stack applications, ML models, and electronics 
+              across diverse disciplines.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 pt-4'>
+              <a href="#projects">
+                <button className='glass-morphism hover-lift px-8 py-4 rounded-xl font-semibold text-white border border-white/20 hover:bg-white/10 transition-all duration-300'>
+                  View Projects
+                </button>
+              </a>
+              <a href={resume} target="_blank" rel="noopener noreferrer">
+                <button className='bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 px-8 py-4 rounded-xl font-semibold text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105'>
+                  Resume
+                </button>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-      <div className = 'bg-gray-500 h-[2px] w-[100%] mt-[100px] mb-[100px]'></div>
-      <div className = 'flex flex-col items-center'>
-        <h1 className = 'font-bold md:text-5xl'>
-            Favorite Technologies
-        </h1>
-      </div>
-      <div className='max-w-[85%] mt-6 mx-auto'>
-        <Technologies />
+      
+      <div className='w-full h-px bg-gradient-to-r from-transparent via-white/30 to-transparent my-16'></div>
+      
+      <div className='max-w-7xl mx-auto px-6 pb-20'>
+        <div className='text-center mb-12 animate-slide-up'>
+          <h2 className='text-4xl md:text-5xl font-bold mb-4'>
+            Favorite <span className='bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text text-transparent drop-shadow-lg'>Technologies</span>
+          </h2>
+        </div>
+        <div className='animate-fade-in'>
+          <Technologies />
+        </div>
       </div>
     </div>
   );
@@ -72,11 +96,23 @@ const Technologies = () => {
   ];
 
   return (
-    <div className='flex flex-wrap justify-center items-center'>
+    <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8 max-w-6xl mx-auto'>
       {technologies.map((tech, index) => (
-        <div key={index} className='flex flex-col items-center m-4'>
-          <img src={tech.icon} alt={`${tech.name} icon`} className='w-24 h-24 mb-2' />
-          <p className='text-sm font-medium'>{tech.name}</p>
+        <div 
+          key={index} 
+          className='flex flex-col items-center glass-morphism p-6 rounded-2xl tech-card-hover floating-tech group cursor-pointer'
+          style={{ animationDelay: `${index * 0.1}s` }}
+        >
+          <div className='tech-icon-3d'>
+            <img 
+              src={tech.icon} 
+              alt={`${tech.name} icon`} 
+              className='w-16 h-16 mb-3' 
+            />
+          </div>
+          <p className='text-sm font-medium text-center text-gray-200 group-hover:text-white transition-colors duration-300'>
+            {tech.name}
+          </p>
         </div>
       ))}
     </div>

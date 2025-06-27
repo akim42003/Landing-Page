@@ -9,34 +9,38 @@ const Navbar = () => {
     };
 
     return (
-        <div className='fixed w-full top-0 left-0 z-50 bg-gray-900 bg-opacity-90'>
-            <div className='flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-white'>
-                <h1 className='w-full text-3xl font-bold text-[#00df9a]'>aKIM.soln</h1>
-                <ul className='hidden md:flex'>
-                    <li className='p-4'>
-                        <a href="#home">Home</a>
+        <div className='fixed w-full top-0 left-0 z-50 glass-morphism animate-fade-in'>
+            <div className='flex justify-between items-center h-20 max-w-7xl mx-auto px-6 text-white'>
+                <h1 className='text-2xl font-bold bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text text-transparent drop-shadow-lg'>
+                    Alex Kim
+                </h1>
+                <ul className='hidden md:flex space-x-8'>
+                    <li>
+                        <a href="#home" className='hover:text-blue-300 transition-colors duration-300 font-medium'>Home</a>
                     </li>
-                    <li className='p-4'>
-                        <a href="#about">About</a>
+                    <li>
+                        <a href="#about" className='hover:text-blue-300 transition-colors duration-300 font-medium'>About</a>
                     </li>
-                    <li className='p-4'>
-                        <a href="#projects">Projects</a>
+                    <li>
+                        <a href="#projects" className='hover:text-blue-300 transition-colors duration-300 font-medium'>Projects</a>
                     </li>
                 </ul>
                 <div onClick={handleNav} className='block md:hidden'>
                     {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
                 </div>
-                <div className={nav ? 'fixed left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-gray-900 bg-opacity-90 ease-in-out duration-500' : 'fixed left-[-100%]'}>
-                    <h1 className='w-full text-3xl font-bold text-[#00df9a] m-4'>aKIM.soln</h1>
-                    <ul className='uppercase p-4'>
-                        <li className='p-4 border-b border-gray-600'>
-                            <a href="#home" onClick={handleNav}>Home</a>
+                <div className={nav ? 'fixed left-0 top-0 w-[70%] h-full glass-morphism-dark ease-in-out duration-500 z-50' : 'fixed left-[-100%] ease-in-out duration-500'}>
+                    <h1 className='text-2xl font-bold bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text text-transparent drop-shadow-lg m-6'>
+                        Alex Kim
+                    </h1>
+                    <ul className='p-6 space-y-4'>
+                        <li className='p-4 border-b border-white/20'>
+                            <a href="#home" onClick={handleNav} className='text-white hover:text-blue-300 transition-colors duration-300 font-medium'>Home</a>
                         </li>
-                        <li className='p-4 border-b border-gray-600'>
-                            <a href="#about" onClick={handleNav}>About</a>
+                        <li className='p-4 border-b border-white/20'>
+                            <a href="#about" onClick={handleNav} className='text-white hover:text-blue-300 transition-colors duration-300 font-medium'>About</a>
                         </li>
                         <li className='p-4'>
-                            <a href="#projects" onClick={handleNav}>Projects</a>
+                            <a href="#projects" onClick={handleNav} className='text-white hover:text-blue-300 transition-colors duration-300 font-medium'>Projects</a>
                         </li>
                     </ul>
                 </div>
