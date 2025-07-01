@@ -25,32 +25,32 @@ const Hero = () => {
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
-  // Frutiger Aero Bubble Component
+  // Subtle Frutiger Aero Bubble Component
   const FruttigerBubbles = () => {
-    const bubbles = Array.from({ length: 15 }, (_, i) => i);
+    const bubbles = Array.from({ length: 8 }, (_, i) => i);
     
     return (
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {bubbles.map((bubble) => (
           <motion.div
             key={bubble}
-            className="absolute fa-bubble"
+            className="absolute fa-bubble opacity-40"
             style={{
-              width: Math.random() * 60 + 20,
-              height: Math.random() * 60 + 20,
+              width: Math.random() * 40 + 15,
+              height: Math.random() * 40 + 15,
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
             }}
             animate={{
-              y: [0, -30, 0],
-              x: [0, Math.random() * 20 - 10, 0],
-              scale: [1, 1.1, 1],
+              y: [0, -15, 0],
+              x: [0, Math.random() * 10 - 5, 0],
+              scale: [1, 1.05, 1],
             }}
             transition={{
-              duration: Math.random() * 4 + 6,
+              duration: Math.random() * 6 + 8,
               repeat: Infinity,
               ease: "easeInOut",
-              delay: Math.random() * 2,
+              delay: Math.random() * 4,
             }}
           />
         ))}
@@ -58,34 +58,34 @@ const Hero = () => {
     );
   };
 
-  // Water Drops Animation
+  // Subtle Water Drops Animation
   const WaterDrops = () => {
-    const drops = Array.from({ length: 8 }, (_, i) => i);
+    const drops = Array.from({ length: 4 }, (_, i) => i);
     
     return (
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {drops.map((drop) => (
           <motion.div
             key={drop}
-            className="absolute"
+            className="absolute opacity-30"
             style={{
-              width: 4,
-              height: 4,
+              width: 3,
+              height: 3,
               borderRadius: '50%',
-              background: 'linear-gradient(135deg, #00BFFF, #87CEEB)',
-              boxShadow: '0 0 10px rgba(135, 206, 235, 0.6)',
+              background: 'linear-gradient(135deg, #2196F3, #00BCD4)',
+              boxShadow: '0 0 8px rgba(33, 150, 243, 0.4)',
               left: `${Math.random() * 100}%`,
               top: '-10px',
             }}
             animate={{
-              y: '100vh',
-              opacity: [0, 1, 1, 0],
+              y: '110vh',
+              opacity: [0, 0.6, 0.6, 0],
             }}
             transition={{
-              duration: Math.random() * 3 + 4,
+              duration: Math.random() * 4 + 8,
               repeat: Infinity,
               ease: "linear",
-              delay: Math.random() * 5,
+              delay: Math.random() * 10,
             }}
           />
         ))}
@@ -99,24 +99,42 @@ const Hero = () => {
       <FruttigerBubbles />
       <WaterDrops />
       
-      {/* Organic Background Shapes */}
+      {/* Subtle Organic Background Shapes */}
       <motion.div
-        className="absolute top-20 right-20 w-96 h-96 fa-organic-1 fa-glass-blue fa-floating"
+        className="absolute top-20 right-20 w-72 h-72 fa-organic-1 fa-glass-blue opacity-20"
         style={{
-          x: mousePosition.x * 2,
-          y: mousePosition.y * 2 + y1
+          x: mousePosition.x * 1,
+          y: mousePosition.y * 1 + y1
+        }}
+        animate={{
+          rotate: [0, 180, 360],
+          scale: [1, 1.05, 1],
+        }}
+        transition={{
+          duration: 25,
+          repeat: Infinity,
+          ease: "linear"
         }}
       />
       <motion.div
-        className="absolute bottom-40 left-20 w-80 h-80 fa-organic-2 fa-glass-green fa-floating"
+        className="absolute bottom-40 left-20 w-64 h-64 fa-organic-2 fa-glass-green opacity-15"
         style={{
-          x: mousePosition.x * -1.5,
-          y: mousePosition.y * -1.5 + y2
+          x: mousePosition.x * -0.8,
+          y: mousePosition.y * -0.8 + y2
+        }}
+        animate={{
+          rotate: [360, 180, 0],
+          scale: [1.05, 1, 1.05],
+        }}
+        transition={{
+          duration: 30,
+          repeat: Infinity,
+          ease: "linear"
         }}
       />
       
       {/* Tech Grid Overlay */}
-      <div className="absolute inset-0 fa-tech-grid opacity-30" />
+      <div className="absolute inset-0 fa-tech-grid opacity-10" />
       
       <div className='max-w-7xl mx-auto px-6 py-20 mt-20 relative z-10'>
         <div className='grid md:grid-cols-2 gap-12 items-center'>
@@ -186,13 +204,13 @@ const Hero = () => {
             }}
           >
             <motion.h1 
-              className='text-5xl md:text-6xl font-bold leading-tight fa-text'
+              className='text-5xl md:text-6xl font-bold leading-tight'
               initial={{ opacity: 0, y: 50 }}
               animate={heroInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
             >
               <motion.span
-                className="fa-text"
+                className="fa-text-pop"
                 initial={{ opacity: 0, x: -30 }}
                 animate={heroInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.8 }}
@@ -214,7 +232,7 @@ const Hero = () => {
             </motion.h1>
             
             <motion.h2 
-              className='text-2xl md:text-3xl font-light fa-text'
+              className='text-2xl md:text-3xl font-medium fa-text-pop'
               initial={{ opacity: 0, y: 30 }}
               animate={heroInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 1.2 }}
@@ -223,7 +241,7 @@ const Hero = () => {
             </motion.h2>
             
             <motion.p 
-              className='text-lg leading-relaxed max-w-lg fa-text'
+              className='text-lg leading-relaxed max-w-lg fa-text font-medium'
               initial={{ opacity: 0, y: 30 }}
               animate={heroInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 1.4 }}

@@ -14,39 +14,75 @@ const About = () => {
   };
 
   return (
-    <div className='py-20 relative overflow-hidden'>
-      {/* Animated background elements */}
+    <div className='py-20 relative overflow-hidden' style={{
+      background: 'linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(240,248,255,0.8) 50%, rgba(224,255,255,0.9) 100%)'
+    }}>
+      {/* Frutiger Aero Background Elements */}
       <motion.div
-        className="absolute top-20 right-10 w-64 h-64 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl"
+        className="absolute top-20 right-10 w-64 h-64 fa-organic-1 fa-glass-blue opacity-20"
         animate={{
-          scale: [1, 1.2, 1],
-          rotate: [0, 180, 360],
+          rotate: [0, 360],
+          scale: [1, 1.1, 1],
         }}
         transition={{
-          duration: 20,
+          duration: 25,
           repeat: Infinity,
           ease: "linear"
         }}
       />
       <motion.div
-        className="absolute bottom-20 left-10 w-48 h-48 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-2xl"
+        className="absolute bottom-20 left-10 w-48 h-48 fa-organic-2 fa-glass-green opacity-15"
         animate={{
-          scale: [1.2, 1, 1.2],
-          rotate: [360, 180, 0],
+          rotate: [360, 0],
+          scale: [1.1, 1, 1.1],
         }}
         transition={{
-          duration: 15,
+          duration: 30,
           repeat: Infinity,
           ease: "linear"
         }}
       />
       
+      {/* Floating Bubbles */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {Array.from({ length: 8 }, (_, i) => (
+          <motion.div
+            key={i}
+            className="absolute fa-bubble opacity-30"
+            style={{
+              width: Math.random() * 25 + 10,
+              height: Math.random() * 25 + 10,
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+            animate={{
+              y: [0, -20, 0],
+              x: [0, Math.random() * 10 - 5, 0],
+              scale: [1, 1.1, 1],
+            }}
+            transition={{
+              duration: Math.random() * 6 + 8,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: Math.random() * 4,
+            }}
+          />
+        ))}
+      </div>
+      
+      {/* Flowing Wave Separator */}
       <motion.div 
-        className='w-full h-px bg-gradient-to-r from-transparent via-white/30 to-transparent my-16'
+        className='w-full h-1 my-16'
+        style={{
+          background: 'linear-gradient(90deg, transparent, #00BFFF, #87CEEB, #98FB98, transparent)',
+        }}
         initial={{ scaleX: 0 }}
         whileInView={{ scaleX: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1.5, ease: "easeInOut" }}
+        animate={{
+          scaleX: [0.8, 1.2, 0.8],
+        }}
       />
       
       <div className='max-w-7xl mx-auto px-6 relative z-10'>
@@ -54,13 +90,14 @@ const About = () => {
           <div className='space-y-6' ref={contentRef}>
             <motion.h2 
               ref={titleRef}
-              className='text-4xl md:text-5xl font-bold text-white mb-6'
+              className='text-4xl md:text-5xl font-bold mb-6'
               initial={{ opacity: 0, y: 50 }}
               animate={titleInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              About <motion.span 
-                className='bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text text-transparent drop-shadow-lg'
+              <span className='fa-text-pop'>About </span>
+              <motion.span 
+                className='fa-text-gradient'
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={titleInView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
@@ -70,45 +107,48 @@ const About = () => {
             </motion.h2>
             
             <motion.div 
-              className='glass-morphism p-6 rounded-2xl relative overflow-hidden'
+              className='fa-glass p-6 rounded-3xl relative overflow-hidden'
               initial={{ opacity: 0, y: 30, scale: 0.95 }}
               animate={contentInView ? { opacity: 1, y: 0, scale: 1 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}
               whileHover={{ 
                 scale: 1.02,
-                boxShadow: "0 20px 40px rgba(59, 130, 246, 0.15)"
+                boxShadow: "0 20px 40px rgba(30, 144, 255, 0.2)"
               }}
             >
               <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5"
+                className="absolute inset-0 rounded-3xl"
+                style={{
+                  background: 'linear-gradient(135deg, rgba(0,191,255,0.1), rgba(152,251,152,0.05))'
+                }}
                 animate={{
                   background: [
-                    "linear-gradient(45deg, rgba(59, 130, 246, 0.05), rgba(147, 51, 234, 0.05))",
-                    "linear-gradient(135deg, rgba(147, 51, 234, 0.05), rgba(59, 130, 246, 0.05))",
-                    "linear-gradient(225deg, rgba(59, 130, 246, 0.05), rgba(147, 51, 234, 0.05))"
+                    "linear-gradient(45deg, rgba(0,191,255,0.1), rgba(152,251,152,0.05))",
+                    "linear-gradient(135deg, rgba(152,251,152,0.05), rgba(0,191,255,0.1))",
+                    "linear-gradient(225deg, rgba(0,191,255,0.1), rgba(152,251,152,0.05))"
                   ]
                 }}
-                transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
               />
               
               <motion.p 
-                className='text-gray-300 leading-relaxed text-lg mb-4 relative z-10'
+                className='fa-text leading-relaxed text-lg mb-4 relative z-10'
                 initial={{ opacity: 0, x: -20 }}
                 animate={contentInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
-                Currently, I'm a senior at <span className='text-cyan-300 font-semibold'>Hamilton College</span> studying Mathematics and Music. 
+                Currently, I'm a senior at <span className='fa-text-gradient font-semibold'>Hamilton College</span> studying Mathematics and Music. 
                 Ever since I can remember, I've had a passion for creating things—whether it's through music, legos, or lines of code.
               </motion.p>
               
               <motion.p 
-                className='text-gray-300 leading-relaxed text-lg mb-4 relative z-10'
+                className='fa-text leading-relaxed text-lg mb-4 relative z-10'
                 initial={{ opacity: 0, x: -20 }}
                 animate={contentInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.6 }}
               >
                 I first discovered the possibilities of machine learning during my internship at the
-                <span className='text-cyan-300 font-semibold'> Boston Children's Hospital Musculoskeletal Informatics Group</span>.
+                <span className='fa-text-gradient font-semibold'> Boston Children's Hospital Musculoskeletal Informatics Group</span>.
               </motion.p>
 
               {showMore && (
@@ -120,7 +160,7 @@ const About = () => {
                   transition={{ duration: 0.5, ease: "easeInOut" }}
                 >
                   <motion.p 
-                    className='text-gray-300 leading-relaxed'
+                    className='fa-text leading-relaxed'
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.1 }}
@@ -130,42 +170,43 @@ const About = () => {
                   </motion.p>
                   
                   <motion.p 
-                    className='text-gray-300 leading-relaxed'
+                    className='fa-text leading-relaxed'
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
                   >
-                    I returned the next year with the startup <span className='text-cyan-300 font-semibold'>BonePixel</span>, writing 3D modeling algorithms. 
+                    I returned the next year with the startup <span className='fa-text-gradient font-semibold'>BonePixel</span>, writing 3D modeling algorithms. 
                     This experience led me to explore personal projects through hackathons and experiments with computer vision.
                   </motion.p>
                   
                   <motion.p 
-                    className='text-gray-300 leading-relaxed'
+                    className='fa-text leading-relaxed'
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.3 }}
                   >
-                    I was granted an <span className='text-cyan-300 font-semibold'>Emerson Fellowship</span> for summer 2024, developing a vocal register classification pipeline 
+                    I was granted an <span className='fa-text-gradient font-semibold'>Emerson Fellowship</span> for summer 2024, developing a vocal register classification pipeline 
                     with a musician-friendly GUI. This tool helps singers understand and apply technique, particularly useful for my acapella group, The Buffers.
                   </motion.p>
                   
                   <motion.p 
-                    className='text-gray-300 leading-relaxed'
+                    className='fa-text leading-relaxed'
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.4 }}
                   >
-                    Outside of STEM and music, I enjoy <span className='text-cyan-300'>basketball, skateboarding, cooking with family, and crocheting</span>.
+                    Outside of STEM and music, I enjoy <span className='fa-text-gradient'>basketball, skateboarding, cooking with family, and crocheting</span>.
                   </motion.p>
                 </motion.div>
               )}
               
               <motion.button 
                 onClick={toggleShowMore} 
-                className='mt-6 px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 rounded-lg font-medium text-white transition-all duration-300 relative z-10'
+                className='mt-6 px-8 py-3 fa-button rounded-3xl font-semibold relative z-10 transition-all duration-300'
                 whileHover={{ 
                   scale: 1.05,
-                  boxShadow: "0 10px 20px rgba(59, 130, 246, 0.3)"
+                  y: -2,
+                  boxShadow: "0 10px 25px rgba(30, 144, 255, 0.4)"
                 }}
                 whileTap={{ scale: 0.95 }}
                 initial={{ opacity: 0, y: 20 }}
@@ -185,30 +226,33 @@ const About = () => {
             style={{ transformStyle: 'preserve-3d' }}
           >
             <motion.div 
-              className='glass-morphism p-4 rounded-2xl mx-auto max-w-md relative overflow-hidden'
+              className='fa-glass p-4 rounded-3xl mx-auto max-w-md relative overflow-hidden'
               whileHover={{ 
                 scale: 1.05,
                 rotateY: 5,
-                boxShadow: "0 25px 50px rgba(59, 130, 246, 0.2)"
+                boxShadow: "0 25px 50px rgba(30, 144, 255, 0.3)"
               }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
             >
               <motion.div
-                className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10"
+                className="absolute inset-0 rounded-3xl"
+                style={{
+                  background: 'linear-gradient(135deg, rgba(0,191,255,0.1), rgba(152,251,152,0.05))'
+                }}
                 animate={{
                   background: [
-                    "linear-gradient(45deg, rgba(59, 130, 246, 0.1), rgba(147, 51, 234, 0.1))",
-                    "linear-gradient(135deg, rgba(147, 51, 234, 0.1), rgba(6, 182, 212, 0.1))",
-                    "linear-gradient(225deg, rgba(6, 182, 212, 0.1), rgba(59, 130, 246, 0.1))"
+                    "linear-gradient(45deg, rgba(0,191,255,0.1), rgba(152,251,152,0.05))",
+                    "linear-gradient(135deg, rgba(152,251,152,0.1), rgba(0,191,255,0.05))",
+                    "linear-gradient(225deg, rgba(0,191,255,0.1), rgba(152,251,152,0.05))"
                   ]
                 }}
-                transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+                transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
               />
               <motion.img 
                 src={selfie} 
                 alt='Alex Kim' 
-                className='w-full rounded-xl shadow-lg relative z-10'
-                whileHover={{ scale: 1.03 }}
+                className='w-full rounded-2xl shadow-lg relative z-10'
+                whileHover={{ scale: 1.03, filter: "brightness(1.1)" }}
                 transition={{ type: "spring", stiffness: 400, damping: 25 }}
               />
             </motion.div>

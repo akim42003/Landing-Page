@@ -2,54 +2,70 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  /* Frutiger Aero Color Palette */
-  --fa-sky-blue: #87CEEB;
-  --fa-bright-blue: #00BFFF;
-  --fa-electric-blue: #1E90FF;
-  --fa-aqua: #00FFFF;
-  --fa-mint-green: #98FB98;
-  --fa-lime-green: #32CD32;
+  /* Clean Blue/Green Color Palette */
+  --fa-deep-blue: #0B4D6A;
+  --fa-bright-blue: #2196F3;
+  --fa-electric-blue: #03A9F4;
+  --fa-aqua: #00BCD4;
+  --fa-teal: #009688;
+  --fa-emerald: #4CAF50;
   --fa-white: #FFFFFF;
-  --fa-off-white: #F8FFFF;
-  --fa-light-gray: #F0F8FF;
-  --fa-glass-white: rgba(255, 255, 255, 0.15);
-  --fa-glass-blue: rgba(135, 206, 235, 0.2);
-  --fa-glass-green: rgba(152, 251, 152, 0.15);
+  --fa-off-white: #FAFFFE;
+  --fa-text-dark: #0D47A1;
+  --fa-glass-white: rgba(255, 255, 255, 0.25);
+  --fa-glass-blue: rgba(33, 150, 243, 0.15);
+  --fa-glass-green: rgba(76, 175, 80, 0.12);
   
   /* Gradients */
-  --fa-sky-gradient: linear-gradient(180deg, #87CEEB 0%, #E0F6FF 50%, #FFFFFF 100%);
-  --fa-water-gradient: linear-gradient(45deg, #00BFFF, #87CEEB, #98FB98);
-  --fa-glass-gradient: linear-gradient(135deg, rgba(255,255,255,0.3), rgba(255,255,255,0.1));
-  --fa-button-gradient: linear-gradient(135deg, #00BFFF, #1E90FF, #00FFFF);
+  --fa-sky-gradient: linear-gradient(180deg, #E3F2FD 0%, #F1F8E9 50%, #FFFFFF 100%);
+  --fa-water-gradient: linear-gradient(45deg, #2196F3, #00BCD4, #4CAF50);
+  --fa-glass-gradient: linear-gradient(135deg, rgba(255,255,255,0.4), rgba(255,255,255,0.15));
+  --fa-button-gradient: linear-gradient(135deg, #2196F3, #03A9F4, #00BCD4);
+  --fa-text-gradient: linear-gradient(135deg, #0D47A1, #2196F3, #009688);
   
   /* Shadows and Effects */
-  --fa-glow-blue: 0 0 20px rgba(30, 144, 255, 0.5);
-  --fa-glow-green: 0 0 20px rgba(50, 205, 50, 0.5);
-  --fa-soft-shadow: 0 8px 32px rgba(135, 206, 235, 0.3);
-  --fa-glass-shadow: 0 8px 32px rgba(255, 255, 255, 0.2);
+  --fa-glow-blue: 0 0 25px rgba(33, 150, 243, 0.6);
+  --fa-glow-green: 0 0 25px rgba(76, 175, 80, 0.6);
+  --fa-soft-shadow: 0 8px 32px rgba(33, 150, 243, 0.2);
+  --fa-glass-shadow: 0 8px 32px rgba(255, 255, 255, 0.3);
+  --fa-skeuomorphic-shadow: 0 2px 8px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.5);
+  --fa-text-shadow: 0 2px 4px rgba(13, 71, 161, 0.3), 0 0 8px rgba(255,255,255,0.8);
 }
 
-/* Frutiger Aero Glass Morphism */
+/* Glassmorphic-Skeuomorphic Glass Elements */
 .fa-glass {
   background: var(--fa-glass-gradient);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: var(--fa-glass-shadow);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: var(--fa-skeuomorphic-shadow);
+  position: relative;
+}
+
+.fa-glass::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent);
 }
 
 .fa-glass-blue {
   background: linear-gradient(135deg, var(--fa-glass-blue), var(--fa-glass-white));
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  border: 1px solid rgba(135, 206, 235, 0.4);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(33, 150, 243, 0.3);
+  box-shadow: var(--fa-skeuomorphic-shadow), var(--fa-glow-blue);
 }
 
 .fa-glass-green {
   background: linear-gradient(135deg, var(--fa-glass-green), var(--fa-glass-white));
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  border: 1px solid rgba(152, 251, 152, 0.4);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(76, 175, 80, 0.3);
+  box-shadow: var(--fa-skeuomorphic-shadow), var(--fa-glow-green);
 }
 
 /* Frutiger Aero Buttons */
@@ -82,11 +98,13 @@
 /* Organic Shapes */
 .fa-bubble {
   border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(135, 206, 235, 0.3));
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  box-shadow: 0 4px 20px rgba(135, 206, 235, 0.4);
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.9), rgba(33, 150, 243, 0.4), rgba(76, 175, 80, 0.3));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 
+    0 4px 20px rgba(33, 150, 243, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
 .fa-wave {
@@ -129,23 +147,40 @@
 .fa-water-animation { animation: fa-water-flow 8s ease-in-out infinite; }
 .fa-glow-animation { animation: fa-glow-pulse 3s ease-in-out infinite; }
 
-/* Typography */
+/* Enhanced Typography for Better Contrast */
 .fa-text {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  color: var(--fa-electric-blue);
-  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.5);
+  color: var(--fa-text-dark);
+  font-weight: 600;
+  text-shadow: var(--fa-text-shadow);
+  letter-spacing: -0.02em;
 }
 
 .fa-text-white {
   color: var(--fa-white);
-  text-shadow: 0 2px 8px rgba(30, 144, 255, 0.3);
+  font-weight: 700;
+  text-shadow: 0 2px 12px rgba(13, 71, 161, 0.5), 0 0 4px rgba(0,0,0,0.8);
+  letter-spacing: -0.01em;
 }
 
 .fa-text-gradient {
-  background: linear-gradient(135deg, var(--fa-electric-blue), var(--fa-aqua), var(--fa-lime-green));
+  background: var(--fa-text-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  font-weight: 700;
+  text-shadow: none;
+  filter: drop-shadow(0 2px 4px rgba(255,255,255,0.8)) drop-shadow(0 0 8px rgba(13, 71, 161, 0.3));
+}
+
+.fa-text-pop {
+  color: var(--fa-deep-blue);
+  font-weight: 800;
+  text-shadow: 
+    0 1px 0 rgba(255,255,255,1),
+    0 2px 4px rgba(13, 71, 161, 0.4),
+    0 0 12px rgba(255,255,255,0.9);
+  letter-spacing: -0.03em;
 }
 
 /* Background Elements */

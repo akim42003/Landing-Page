@@ -39,33 +39,32 @@ const Technologies = () => {
     { name: 'Tailwind CSS', icon: tailwindIcon}
   ];
 
-  // Frutiger Aero Floating Elements
+  // Subtle Floating Elements
   const FloatingElements = () => {
-    const elements = Array.from({ length: 12 }, (_, i) => i);
+    const elements = Array.from({ length: 6 }, (_, i) => i);
     
     return (
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {elements.map((el) => (
           <motion.div
             key={el}
-            className="absolute fa-bubble"
+            className="absolute fa-bubble opacity-25"
             style={{
-              width: Math.random() * 40 + 15,
-              height: Math.random() * 40 + 15,
+              width: Math.random() * 30 + 10,
+              height: Math.random() * 30 + 10,
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
             }}
             animate={{
-              y: [0, -40, 0],
-              x: [0, Math.random() * 30 - 15, 0],
-              rotate: [0, 360],
-              scale: [1, 1.2, 1],
+              y: [0, -20, 0],
+              x: [0, Math.random() * 15 - 7, 0],
+              scale: [1, 1.1, 1],
             }}
             transition={{
-              duration: Math.random() * 6 + 8,
+              duration: Math.random() * 8 + 12,
               repeat: Infinity,
               ease: "easeInOut",
-              delay: Math.random() * 3,
+              delay: Math.random() * 5,
             }}
           />
         ))}
@@ -82,25 +81,25 @@ const Technologies = () => {
       
       {/* Organic Background Shapes */}
       <motion.div
-        className="absolute top-10 right-10 w-80 h-80 fa-organic-1 fa-glass-blue opacity-40"
+        className="absolute top-10 right-10 w-80 h-80 fa-organic-1 fa-glass-blue opacity-15"
         animate={{
           rotate: [0, 360],
-          scale: [1, 1.1, 1],
+          scale: [1, 1.05, 1],
         }}
         transition={{
-          duration: 20,
+          duration: 30,
           repeat: Infinity,
           ease: "linear"
         }}
       />
       <motion.div
-        className="absolute bottom-10 left-10 w-96 h-96 fa-organic-2 fa-glass-green opacity-30"
+        className="absolute bottom-10 left-10 w-96 h-96 fa-organic-2 fa-glass-green opacity-10"
         animate={{
           rotate: [360, 0],
-          scale: [1.1, 1, 1.1],
+          scale: [1.05, 1, 1.05],
         }}
         transition={{
-          duration: 25,
+          duration: 35,
           repeat: Infinity,
           ease: "linear"
         }}
@@ -131,12 +130,13 @@ const Technologies = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <motion.h2 
-            className='text-4xl md:text-5xl font-bold mb-4 fa-text'
+            className='text-4xl md:text-5xl font-bold mb-4'
             initial={{ opacity: 0, scale: 0.8 }}
             animate={titleInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           >
-            Favorite <motion.span 
+            <span className='fa-text-pop'>Favorite </span>
+            <motion.span 
               className='fa-text-gradient'
               initial={{ opacity: 0 }}
               animate={titleInView ? { opacity: 1 } : {}}
@@ -146,7 +146,7 @@ const Technologies = () => {
             </motion.span>
           </motion.h2>
           <motion.p
-            className="text-lg fa-text opacity-80 max-w-2xl mx-auto"
+            className="text-lg fa-text font-medium max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={titleInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.6 }}
@@ -170,9 +170,9 @@ const Technologies = () => {
                 damping: 20
               }}
               whileHover={{ 
-                scale: 1.1,
-                y: -10,
-                boxShadow: "0 15px 40px rgba(30, 144, 255, 0.3)",
+                scale: 1.05,
+                y: -5,
+                boxShadow: "0 10px 25px rgba(30, 144, 255, 0.2)",
                 zIndex: 10
               }}
               style={{ 
@@ -197,22 +197,22 @@ const Technologies = () => {
                 initial={{ opacity: 0 }}
                 whileHover={{ opacity: 1 }}
               >
-                {Array.from({ length: 4 }, (_, i) => (
+                {Array.from({ length: 2 }, (_, i) => (
                   <motion.div
                     key={i}
-                    className="absolute w-2 h-2 fa-bubble"
+                    className="absolute w-1 h-1 fa-bubble"
                     style={{
-                      left: `${20 + Math.random() * 60}%`,
-                      top: `${20 + Math.random() * 60}%`
+                      left: `${30 + Math.random() * 40}%`,
+                      top: `${30 + Math.random() * 40}%`
                     }}
                     animate={{
-                      y: [-5, -25, -5],
-                      opacity: [0, 1, 0],
-                      scale: [0.5, 1, 0.5]
+                      y: [-3, -15, -3],
+                      opacity: [0, 0.6, 0],
+                      scale: [0.3, 0.8, 0.3]
                     }}
                     transition={{
-                      duration: 2,
-                      delay: i * 0.2,
+                      duration: 3,
+                      delay: i * 0.5,
                       repeat: Infinity,
                       ease: "easeInOut"
                     }}
@@ -240,7 +240,7 @@ const Technologies = () => {
                   />
                 </motion.div>
                 <motion.p 
-                  className='text-sm font-medium text-center fa-text group-hover:fa-text-gradient transition-colors duration-300'
+                  className='text-sm font-semibold text-center fa-text group-hover:fa-text-gradient transition-colors duration-300'
                   whileHover={{ scale: 1.05 }}
                 >
                   {tech.name}

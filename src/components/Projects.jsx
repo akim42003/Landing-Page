@@ -122,43 +122,75 @@ const Projects = () => {
   };
 
   return (
-    <div className="py-20 relative overflow-hidden">
-      {/* Animated background elements */}
+    <div className="py-20 relative overflow-hidden" style={{
+      background: 'linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(240,248,255,0.8) 50%, rgba(224,255,255,0.9) 100%)'
+    }}>
+      {/* Frutiger Aero Background Elements */}
       <motion.div
-        className="absolute top-40 left-20 w-96 h-96 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl"
+        className="absolute top-40 left-20 w-96 h-96 fa-organic-1 fa-glass-blue opacity-15"
         animate={{
-          scale: [1, 1.3, 1],
-          rotate: [0, 270, 360],
-          x: [0, 50, 0],
-          y: [0, -30, 0]
+          rotate: [0, 360],
+          scale: [1, 1.1, 1],
         }}
         transition={{
-          duration: 25,
+          duration: 30,
           repeat: Infinity,
           ease: "linear"
         }}
       />
       <motion.div
-        className="absolute bottom-40 right-20 w-80 h-80 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-2xl"
+        className="absolute bottom-40 right-20 w-80 h-80 fa-organic-2 fa-glass-green opacity-10"
         animate={{
-          scale: [1.2, 1, 1.2],
-          rotate: [360, 180, 0],
-          x: [0, -40, 0],
-          y: [0, 20, 0]
+          rotate: [360, 0],
+          scale: [1.1, 1, 1.1],
         }}
         transition={{
-          duration: 20,
+          duration: 35,
           repeat: Infinity,
           ease: "linear"
         }}
       />
       
+      {/* Floating Bubbles */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {Array.from({ length: 12 }, (_, i) => (
+          <motion.div
+            key={i}
+            className="absolute fa-bubble opacity-25"
+            style={{
+              width: Math.random() * 30 + 15,
+              height: Math.random() * 30 + 15,
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+            animate={{
+              y: [0, -25, 0],
+              x: [0, Math.random() * 15 - 7, 0],
+              scale: [1, 1.2, 1],
+            }}
+            transition={{
+              duration: Math.random() * 8 + 10,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: Math.random() * 5,
+            }}
+          />
+        ))}
+      </div>
+      
+      {/* Flowing Wave Separator */}
       <motion.div 
-        className='w-full h-px bg-gradient-to-r from-transparent via-white/30 to-transparent my-16'
+        className='w-full h-1 my-16'
+        style={{
+          background: 'linear-gradient(90deg, transparent, #00BFFF, #87CEEB, #98FB98, transparent)',
+        }}
         initial={{ scaleX: 0 }}
         whileInView={{ scaleX: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1.5, ease: "easeInOut" }}
+        animate={{
+          scaleX: [0.8, 1.2, 0.8],
+        }}
       />
       
       <div className='max-w-7xl mx-auto px-6 relative z-10'>
@@ -170,13 +202,14 @@ const Projects = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <motion.h2 
-            className='text-4xl md:text-5xl font-bold mb-4 text-white'
+            className='text-4xl md:text-5xl font-bold mb-4'
             initial={{ opacity: 0, scale: 0.5 }}
             animate={titleInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           >
-            Featured <motion.span 
-              className='bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text text-transparent drop-shadow-lg'
+            <span className='fa-text-pop'>Featured </span>
+            <motion.span 
+              className='fa-text-gradient'
               initial={{ opacity: 0, rotateY: -90 }}
               animate={titleInView ? { opacity: 1, rotateY: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
@@ -185,7 +218,7 @@ const Projects = () => {
             </motion.span>
           </motion.h2>
           <motion.p 
-            className='text-xl text-gray-300 max-w-2xl mx-auto'
+            className='text-xl fa-text max-w-2xl mx-auto'
             initial={{ opacity: 0, y: 20 }}
             animate={titleInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.6 }}
@@ -205,14 +238,14 @@ const Projects = () => {
           {featuredProjects.map((project, index) => (
             <motion.div 
               key={index} 
-              className='glass-morphism rounded-2xl group relative overflow-hidden'
+              className='fa-glass rounded-3xl group relative overflow-hidden'
               variants={projectVariants}
               style={{ transformStyle: 'preserve-3d' }}
               whileHover={{ 
                 scale: 1.05,
                 rotateY: 5,
                 rotateX: 5,
-                boxShadow: "0 25px 50px rgba(59, 130, 246, 0.25)",
+                boxShadow: "0 25px 50px rgba(30, 144, 255, 0.3)",
                 zIndex: 10
               }}
               onHoverStart={() => setHoveredProject(index)}
@@ -221,15 +254,18 @@ const Projects = () => {
             >
               {/* Animated background gradient */}
               <motion.div
-                className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10"
+                className="absolute inset-0 rounded-3xl"
+                style={{
+                  background: 'linear-gradient(135deg, rgba(0,191,255,0.1), rgba(152,251,152,0.05))'
+                }}
                 animate={hoveredProject === index ? {
                   background: [
-                    "linear-gradient(45deg, rgba(59, 130, 246, 0.1), rgba(147, 51, 234, 0.1))",
-                    "linear-gradient(135deg, rgba(147, 51, 234, 0.15), rgba(6, 182, 212, 0.15))",
-                    "linear-gradient(225deg, rgba(6, 182, 212, 0.1), rgba(59, 130, 246, 0.1))"
+                    "linear-gradient(45deg, rgba(0,191,255,0.1), rgba(152,251,152,0.05))",
+                    "linear-gradient(135deg, rgba(152,251,152,0.1), rgba(0,191,255,0.1))",
+                    "linear-gradient(225deg, rgba(0,191,255,0.1), rgba(152,251,152,0.05))"
                   ]
                 } : {}}
-                transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
               />
               
               {/* Floating particles on hover */}
@@ -239,7 +275,7 @@ const Projects = () => {
                     {Array.from({ length: 8 }, (_, i) => (
                       <motion.div
                         key={i}
-                        className="absolute w-1 h-1 bg-blue-400 rounded-full"
+                        className="absolute w-1 h-1 fa-bubble"
                         initial={{
                           x: Math.random() * 300,
                           y: 300,
@@ -247,12 +283,12 @@ const Projects = () => {
                         }}
                         animate={{
                           y: -10,
-                          opacity: [0, 1, 0],
+                          opacity: [0, 0.8, 0],
                           scale: [0, 1, 0]
                         }}
                         transition={{
-                          duration: 2,
-                          delay: i * 0.1,
+                          duration: 3,
+                          delay: i * 0.15,
                           repeat: Infinity,
                           ease: "linear"
                         }}
@@ -264,13 +300,13 @@ const Projects = () => {
 
               <div className='p-6 relative z-10'>
                 <motion.h3 
-                  className='text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors duration-300'
+                  className='text-xl font-bold fa-text-pop mb-2 group-hover:fa-text-gradient transition-colors duration-300'
                   whileHover={{ scale: 1.05 }}
                 >
                   {project.title}
                 </motion.h3>
                 <motion.p 
-                  className='text-gray-300 text-sm mb-4'
+                  className='fa-text text-sm mb-4'
                   initial={{ opacity: 0.8 }}
                   whileHover={{ opacity: 1 }}
                 >
@@ -285,11 +321,11 @@ const Projects = () => {
                   {project.tech.map((tech, techIndex) => (
                     <motion.span 
                       key={techIndex}
-                      className='px-3 py-1 text-xs bg-white/10 text-blue-300 rounded-full border border-blue-300/30'
+                      className='px-3 py-1 text-xs fa-glass text-blue-700 rounded-full border border-blue-300/30'
                       whileHover={{ 
                         scale: 1.1,
-                        backgroundColor: "rgba(59, 130, 246, 0.2)",
-                        borderColor: "rgba(59, 130, 246, 0.6)"
+                        backgroundColor: "rgba(30, 144, 255, 0.2)",
+                        borderColor: "rgba(30, 144, 255, 0.6)"
                       }}
                       transition={{ type: "spring", stiffness: 400, damping: 25 }}
                     >
@@ -301,10 +337,11 @@ const Projects = () => {
                   href={project.link} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 rounded-lg font-medium text-white transition-all duration-300'
+                  className='inline-flex items-center px-6 py-3 fa-button rounded-3xl font-semibold text-white transition-all duration-300'
                   whileHover={{ 
                     scale: 1.05,
-                    boxShadow: "0 10px 20px rgba(59, 130, 246, 0.4)"
+                    y: -2,
+                    boxShadow: "0 10px 25px rgba(30, 144, 255, 0.5)"
                   }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -334,13 +371,14 @@ const Projects = () => {
           transition={{ duration: 0.8 }}
         >
           <motion.h3 
-            className='text-3xl font-bold text-white mb-8'
+            className='text-3xl font-bold mb-8'
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            Other <span className='bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text text-transparent drop-shadow-lg'>Projects</span>
+            <span className='fa-text-pop'>Other </span>
+            <span className='fa-text-gradient'>Projects</span>
           </motion.h3>
         </motion.div>
 
@@ -360,30 +398,33 @@ const Projects = () => {
             return (
               <motion.div 
                 key={index} 
-                className='glass-morphism rounded-xl p-6 group relative overflow-hidden'
+                className='fa-glass rounded-3xl p-6 group relative overflow-hidden'
                 variants={projectVariants}
                 whileHover={{ 
                   scale: 1.03,
-                  boxShadow: "0 15px 30px rgba(59, 130, 246, 0.15)"
+                  boxShadow: "0 15px 30px rgba(30, 144, 255, 0.2)"
                 }}
                 transition={{ type: "spring", stiffness: 300, damping: 30 }}
               >
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5"
+                  className="absolute inset-0 rounded-3xl"
+                  style={{
+                    background: 'linear-gradient(135deg, rgba(0,191,255,0.05), rgba(152,251,152,0.03))'
+                  }}
                   whileHover={{
-                    background: "linear-gradient(45deg, rgba(59, 130, 246, 0.08), rgba(147, 51, 234, 0.08))"
+                    background: "linear-gradient(45deg, rgba(0,191,255,0.1), rgba(152,251,152,0.08))"
                   }}
                   transition={{ duration: 0.3 }}
                 />
                 
                 <motion.h4 
-                  className='text-lg font-bold text-white mb-2 group-hover:text-blue-300 transition-colors duration-300 relative z-10'
+                  className='text-lg font-bold fa-text-pop mb-2 group-hover:fa-text-gradient transition-colors duration-300 relative z-10'
                   whileHover={{ scale: 1.05 }}
                 >
                   {project.title}
                 </motion.h4>
                 <motion.p 
-                  className='text-gray-300 text-sm mb-4 relative z-10'
+                  className='fa-text text-sm mb-4 relative z-10'
                   animate={{ opacity: isExpanded ? 1 : 0.9 }}
                 >
                   {isExpanded ? project.description : shortDescription}
@@ -391,7 +432,7 @@ const Projects = () => {
                 {project.description.length > 120 && (
                   <motion.button
                     onClick={() => toggleProjectExpansion(index)}
-                    className='text-cyan-300 hover:text-cyan-200 text-sm font-medium transition-colors duration-300 mb-4 relative z-10'
+                    className='fa-text-gradient hover:fa-text-pop text-sm font-medium transition-colors duration-300 mb-4 relative z-10'
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -407,8 +448,8 @@ const Projects = () => {
                   {project.tech.slice(0, 3).map((tech, techIndex) => (
                     <motion.span 
                       key={techIndex}
-                      className='px-2 py-1 text-xs bg-white/10 text-blue-300 rounded-full'
-                      whileHover={{ scale: 1.1, backgroundColor: "rgba(59, 130, 246, 0.2)" }}
+                      className='px-2 py-1 text-xs fa-glass text-blue-700 rounded-full'
+                      whileHover={{ scale: 1.1, backgroundColor: "rgba(30, 144, 255, 0.2)" }}
                     >
                       {tech}
                     </motion.span>
@@ -418,7 +459,7 @@ const Projects = () => {
                   href={project.link} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className='text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors duration-300 relative z-10 inline-flex items-center'
+                  className='fa-text-gradient hover:fa-text-pop text-sm font-medium transition-colors duration-300 relative z-10 inline-flex items-center'
                   whileHover={{ x: 5 }}
                 >
                   View Project →
