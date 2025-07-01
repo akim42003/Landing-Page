@@ -1,0 +1,184 @@
+/* Frutiger Aero Design System */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Frutiger Aero Color Palette */
+  --fa-sky-blue: #87CEEB;
+  --fa-bright-blue: #00BFFF;
+  --fa-electric-blue: #1E90FF;
+  --fa-aqua: #00FFFF;
+  --fa-mint-green: #98FB98;
+  --fa-lime-green: #32CD32;
+  --fa-white: #FFFFFF;
+  --fa-off-white: #F8FFFF;
+  --fa-light-gray: #F0F8FF;
+  --fa-glass-white: rgba(255, 255, 255, 0.15);
+  --fa-glass-blue: rgba(135, 206, 235, 0.2);
+  --fa-glass-green: rgba(152, 251, 152, 0.15);
+  
+  /* Gradients */
+  --fa-sky-gradient: linear-gradient(180deg, #87CEEB 0%, #E0F6FF 50%, #FFFFFF 100%);
+  --fa-water-gradient: linear-gradient(45deg, #00BFFF, #87CEEB, #98FB98);
+  --fa-glass-gradient: linear-gradient(135deg, rgba(255,255,255,0.3), rgba(255,255,255,0.1));
+  --fa-button-gradient: linear-gradient(135deg, #00BFFF, #1E90FF, #00FFFF);
+  
+  /* Shadows and Effects */
+  --fa-glow-blue: 0 0 20px rgba(30, 144, 255, 0.5);
+  --fa-glow-green: 0 0 20px rgba(50, 205, 50, 0.5);
+  --fa-soft-shadow: 0 8px 32px rgba(135, 206, 235, 0.3);
+  --fa-glass-shadow: 0 8px 32px rgba(255, 255, 255, 0.2);
+}
+
+/* Frutiger Aero Glass Morphism */
+.fa-glass {
+  background: var(--fa-glass-gradient);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: var(--fa-glass-shadow);
+}
+
+.fa-glass-blue {
+  background: linear-gradient(135deg, var(--fa-glass-blue), var(--fa-glass-white));
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(135, 206, 235, 0.4);
+}
+
+.fa-glass-green {
+  background: linear-gradient(135deg, var(--fa-glass-green), var(--fa-glass-white));
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(152, 251, 152, 0.4);
+}
+
+/* Frutiger Aero Buttons */
+.fa-button {
+  background: var(--fa-button-gradient);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(30, 144, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+.fa-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(30, 144, 255, 0.6);
+  filter: brightness(1.1);
+}
+
+.fa-button-glass {
+  background: var(--fa-glass-gradient);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: var(--fa-electric-blue);
+  font-weight: 600;
+}
+
+/* Organic Shapes */
+.fa-bubble {
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(135, 206, 235, 0.3));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 20px rgba(135, 206, 235, 0.4);
+}
+
+.fa-wave {
+  clip-path: ellipse(150% 100% at 50% 0%);
+}
+
+.fa-organic-1 {
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
+
+.fa-organic-2 {
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+/* Nature-inspired animations */
+@keyframes fa-float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(2deg); }
+}
+
+@keyframes fa-bubble-rise {
+  0% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
+}
+
+@keyframes fa-water-flow {
+  0% { transform: translateX(-100%) scaleX(1); }
+  50% { transform: translateX(0%) scaleX(1.1); }
+  100% { transform: translateX(100%) scaleX(1); }
+}
+
+@keyframes fa-glow-pulse {
+  0%, 100% { box-shadow: var(--fa-glow-blue); }
+  50% { box-shadow: 0 0 30px rgba(30, 144, 255, 0.8); }
+}
+
+.fa-floating { animation: fa-float 6s ease-in-out infinite; }
+.fa-bubble-animation { animation: fa-bubble-rise 10s linear infinite; }
+.fa-water-animation { animation: fa-water-flow 8s ease-in-out infinite; }
+.fa-glow-animation { animation: fa-glow-pulse 3s ease-in-out infinite; }
+
+/* Typography */
+.fa-text {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--fa-electric-blue);
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.5);
+}
+
+.fa-text-white {
+  color: var(--fa-white);
+  text-shadow: 0 2px 8px rgba(30, 144, 255, 0.3);
+}
+
+.fa-text-gradient {
+  background: linear-gradient(135deg, var(--fa-electric-blue), var(--fa-aqua), var(--fa-lime-green));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Background Elements */
+.fa-background {
+  background: var(--fa-sky-gradient);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.fa-water-drops {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.fa-tech-grid {
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(135, 206, 235, 0.1) 2px, transparent 2px),
+    radial-gradient(circle at 75% 75%, rgba(152, 251, 152, 0.1) 2px, transparent 2px);
+  background-size: 50px 50px;
+  background-position: 0 0, 25px 25px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .fa-glass {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  
+  .fa-button {
+    border-radius: 20px;
+  }
+}
