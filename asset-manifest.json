@@ -1,34 +1,30 @@
 {
   "files": {
-    "main.css": "/Landing-Page/static/css/main.aca406db.css",
-    "main.js": "/Landing-Page/static/js/main.3584bbe6.js",
-    "static/media/circuit.jpg": "/Landing-Page/static/media/circuit.e4e7a663589d5c4054ee.jpg",
-    "static/media/singing.png": "/Landing-Page/static/media/singing.4ec49b37b8d540631fa5.png",
-    "static/media/pao.png": "/Landing-Page/static/media/pao.e29bf81f0e8772b27723.png",
+    "main.css": "/Landing-Page/static/css/main.62c0d954.css",
+    "main.js": "/Landing-Page/static/js/main.ab484ed0.js",
     "static/media/selfie.jpeg": "/Landing-Page/static/media/selfie.265697d3f8d716d04b19.jpeg",
-    "static/media/playcaller.png": "/Landing-Page/static/media/playcaller.8d51a500f06d37dfd784.png",
-    "static/media/resume.pdf": "/Landing-Page/static/media/resume.8299d60653b1ce12aad1.pdf",
-    "static/media/headshot.jpeg": "/Landing-Page/static/media/headshot.d58cd919bd1bf5d93c22.jpeg",
+    "static/media/lebron.jpg": "/Landing-Page/static/media/lebron.85f0c022c308fac40a48.jpg",
+    "static/media/resume.pdf": "/Landing-Page/static/media/resume.98a40051e67726cb2592.pdf",
+    "static/media/linux-svgrepo-com.svg": "/Landing-Page/static/media/linux-svgrepo-com.1cc85cf97811f371fcd932bd6a41ae1c.svg",
     "static/media/PostgresSQL.svg": "/Landing-Page/static/media/PostgresSQL.7bc394e86ea1f692d59a3d484ad156af.svg",
     "static/media/opencv.svg": "/Landing-Page/static/media/opencv.7f54e50d2bf89324b96fc3bea1925060.svg",
     "static/media/scikit-learn.svg": "/Landing-Page/static/media/scikit-learn.92d76f9c7b0e339fbecc4654928e1360.svg",
     "static/media/Python.svg": "/Landing-Page/static/media/Python.849d0b2b5f1ec20f077dd267498bd536.svg",
+    "static/media/github-icon-1-logo-svgrepo-com.svg": "/Landing-Page/static/media/github-icon-1-logo-svgrepo-com.cbbdd0c902376ddb076c5a0cd253936d.svg",
+    "static/media/docker-svgrepo-com.svg": "/Landing-Page/static/media/docker-svgrepo-com.c18b0ce050e1632fb6b039866fc7a0a4.svg",
     "static/media/LaTeX.svg": "/Landing-Page/static/media/LaTeX.e285428eb87473e33b5b7dcd38fbdcbe.svg",
     "static/media/Java.svg": "/Landing-Page/static/media/Java.a751bad6c81431ab4dd6fa6632a65540.svg",
-    "static/media/RStudio.svg": "/Landing-Page/static/media/RStudio.573df38df574219985a3b05e2a00ca80.svg",
-    "static/media/JavaScript.svg": "/Landing-Page/static/media/JavaScript.4c1b5332c1b1057928f6f06cf972c91c.svg",
     "static/media/C++ (CPlusPlus).svg": "/Landing-Page/static/media/C++ (CPlusPlus).617c9a8bb301f69b558a86e12a325806.svg",
-    "static/media/html.svg": "/Landing-Page/static/media/html.aa3858e497f9174ed2e0d794e3517fe0.svg",
+    "static/media/typescript.svg": "/Landing-Page/static/media/typescript.a6305a733dd55243980aec55f96f70c5.svg",
     "static/media/pytorch.svg": "/Landing-Page/static/media/pytorch.9189bc89c46f3a5c93f3ecbd88127211.svg",
     "index.html": "/Landing-Page/index.html",
-    "static/media/Tailwind CSS.svg": "/Landing-Page/static/media/Tailwind CSS.8b3f5baf8ad130d320c59560114d0684.svg",
     "static/media/Pandas.svg": "/Landing-Page/static/media/Pandas.5a48d1677b40ca61e96a08e92fdbb64d.svg",
     "static/media/react.svg": "/Landing-Page/static/media/react.b946632138100ea159504d065878af79.svg",
-    "main.aca406db.css.map": "/Landing-Page/static/css/main.aca406db.css.map",
-    "main.3584bbe6.js.map": "/Landing-Page/static/js/main.3584bbe6.js.map"
+    "main.62c0d954.css.map": "/Landing-Page/static/css/main.62c0d954.css.map",
+    "main.ab484ed0.js.map": "/Landing-Page/static/js/main.ab484ed0.js.map"
   },
   "entrypoints": [
-    "static/css/main.aca406db.css",
-    "static/js/main.3584bbe6.js"
+    "static/css/main.62c0d954.css",
+    "static/js/main.ab484ed0.js"
   ]
 }
