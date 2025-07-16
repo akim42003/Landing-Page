@@ -78,7 +78,7 @@ const projectsData = [
     featured: false,
   },
   {
-    title: "CS_307 Final - NBA Analytics",
+    title: "NBA Prospect Potential",
     description:
       "Comprehensive NBA analytics project built for CS 307. Implements advanced statistical analysis, player performance metrics, and predictive modeling for basketball data insights and team strategy optimization.",
     link: "https://github.com/akim42003/nba-prospect-potential",
