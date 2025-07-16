@@ -41,7 +41,7 @@ const projectsData = [
     title: "HandyFit",
     description:
       "A local calorie tracking application that harnesses computer vision to assess the nutritional content of meals. Users can analyze food images to automatically calculate calories, macronutrients, and dietary information, making nutrition tracking effortless and accurate.",
-    link: "https://github.com/akim42003/Visi-Cal",
+    link: "https://github.com/akim42003/HandyFit---Nutrition-and-Fitness-App",
     tech: ["TypeScript", "React-Native"],
     featured: false,
   },
@@ -81,7 +81,7 @@ const projectsData = [
     title: "CS_307 Final - NBA Analytics",
     description:
       "Comprehensive NBA analytics project built for CS 307. Implements advanced statistical analysis, player performance metrics, and predictive modeling for basketball data insights and team strategy optimization.",
-    link: "https://github.com/akim42003/CS_307-Final",
+    link: "https://github.com/akim42003/nba-prospect-potential",
     tech: ["Python", "Matplotlib", "Scikit-Learn", "Neural Networks"],
     featured: false,
   },
