@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.6b6507a6.css",
-    "main.js": "/static/js/main.6eecb8fd.js",
+    "main.js": "/static/js/main.41605860.js",
     "static/media/selfie.jpeg": "/static/media/selfie.265697d3f8d716d04b19.jpeg",
     "static/media/lebron.jpg": "/static/media/lebron.85f0c022c308fac40a48.jpg",
     "static/media/resume.pdf": "/static/media/resume.98a40051e67726cb2592.pdf",
@@ -22,10 +22,10 @@
     "index.html": "/index.html",
     "static/media/react.svg": "/static/media/react.b946632138100ea159504d065878af79.svg",
     "main.6b6507a6.css.map": "/static/css/main.6b6507a6.css.map",
-    "main.6eecb8fd.js.map": "/static/js/main.6eecb8fd.js.map"
+    "main.41605860.js.map": "/static/js/main.41605860.js.map"
   },
   "entrypoints": [
     "static/css/main.6b6507a6.css",
-    "static/js/main.6eecb8fd.js"
+    "static/js/main.41605860.js"
   ]
 }
