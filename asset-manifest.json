@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.62c0d954.css",
-    "main.js": "/static/js/main.f4003c8f.js",
+    "main.css": "/static/css/main.6b6507a6.css",
+    "main.js": "/static/js/main.c8367bd8.js",
     "static/media/selfie.jpeg": "/static/media/selfie.265697d3f8d716d04b19.jpeg",
     "static/media/lebron.jpg": "/static/media/lebron.85f0c022c308fac40a48.jpg",
     "static/media/resume.pdf": "/static/media/resume.98a40051e67726cb2592.pdf",
@@ -15,16 +15,17 @@
     "static/media/LaTeX.svg": "/static/media/LaTeX.e285428eb87473e33b5b7dcd38fbdcbe.svg",
     "static/media/Java.svg": "/static/media/Java.a751bad6c81431ab4dd6fa6632a65540.svg",
     "static/media/C++ (CPlusPlus).svg": "/static/media/C++ (CPlusPlus).617c9a8bb301f69b558a86e12a325806.svg",
+    "static/media/cuda-svgrepo-com.svg": "/static/media/cuda-svgrepo-com.eb2beb65a9f282d3594c12b02fd4bc78.svg",
     "static/media/typescript.svg": "/static/media/typescript.a6305a733dd55243980aec55f96f70c5.svg",
     "static/media/pytorch.svg": "/static/media/pytorch.9189bc89c46f3a5c93f3ecbd88127211.svg",
     "static/media/Pandas.svg": "/static/media/Pandas.5a48d1677b40ca61e96a08e92fdbb64d.svg",
     "index.html": "/index.html",
     "static/media/react.svg": "/static/media/react.b946632138100ea159504d065878af79.svg",
-    "main.62c0d954.css.map": "/static/css/main.62c0d954.css.map",
-    "main.f4003c8f.js.map": "/static/js/main.f4003c8f.js.map"
+    "main.6b6507a6.css.map": "/static/css/main.6b6507a6.css.map",
+    "main.c8367bd8.js.map": "/static/js/main.c8367bd8.js.map"
   },
   "entrypoints": [
-    "static/css/main.62c0d954.css",
-    "static/js/main.f4003c8f.js"
+    "static/css/main.6b6507a6.css",
+    "static/js/main.c8367bd8.js"
   ]
 }
