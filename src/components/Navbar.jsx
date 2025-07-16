@@ -9,7 +9,7 @@ const Navbar = () => {
     };
 
     return (
-        <div className='fixed w-full top-0 left-0 z-50 glass-morphism animate-fade-in'>
+        <div className='fixed w-full top-0 left-0 z-50 glass-morphism backdrop-blur-lg bg-gray-900/80 shadow-lg animate-fade-in'>
             <div className='flex justify-between items-center h-20 max-w-7xl mx-auto px-6 text-white'>
                 <h1 className='text-2xl font-bold bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text text-transparent drop-shadow-lg'>
                     Alex Kim
@@ -23,6 +23,9 @@ const Navbar = () => {
                     </li>
                     <li>
                         <a href="#projects" className='hover:text-blue-300 transition-colors duration-300 font-medium'>Projects</a>
+                    </li>
+                    <li>
+                        <a href="#publications" className='hover:text-blue-300 transition-colors duration-300 font-medium'>Publications</a>
                     </li>
                 </ul>
                 <div onClick={handleNav} className='block md:hidden'>
@@ -39,8 +42,11 @@ const Navbar = () => {
                         <li className='p-4 border-b border-white/20'>
                             <a href="#about" onClick={handleNav} className='text-white hover:text-blue-300 transition-colors duration-300 font-medium'>About</a>
                         </li>
-                        <li className='p-4'>
+                        <li className='p-4 border-b border-white/20'>
                             <a href="#projects" onClick={handleNav} className='text-white hover:text-blue-300 transition-colors duration-300 font-medium'>Projects</a>
+                        </li>
+                        <li className='p-4'>
+                            <a href="#publications" onClick={handleNav} className='text-white hover:text-blue-300 transition-colors duration-300 font-medium'>Publications</a>
                         </li>
                     </ul>
                 </div>

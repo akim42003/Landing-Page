@@ -58,19 +58,19 @@ const LoadingScreen = ({ onLoadingComplete }) => {
 
       <div className="relative z-10 text-center space-y-8">
         {/* Main logo/name with typewriter effect */}
-        <div className="space-y-4">
-          <h1 className="text-6xl md:text-8xl font-bold text-white animate-pulse">
+        <div className="space-y-4 px-4">
+          <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold text-white animate-pulse">
             <span className="bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text text-transparent">
               AK
             </span>
           </h1>
-          <div className="loading-typewriter text-xl md:text-2xl text-gray-300">
+          <div className="loading-typewriter text-base sm:text-xl md:text-2xl text-gray-300 max-w-sm sm:max-w-none mx-auto">
             Alex Kim: AI, ML, and Software Developer
           </div>
         </div>
 
         {/* Loading progress */}
-        <div className="w-80 mx-auto space-y-4">
+        <div className="w-full max-w-xs sm:w-80 mx-auto space-y-4 px-4">
           <div className="relative">
             <div className="h-2 bg-white/10 rounded-full overflow-hidden backdrop-blur-sm">
               <div
@@ -82,22 +82,22 @@ const LoadingScreen = ({ onLoadingComplete }) => {
             </div>
           </div>
 
-          <div className="flex justify-between items-center text-sm text-gray-400">
+          <div className="flex justify-between items-center text-xs sm:text-sm text-gray-400">
             <span>Loading portfolio...</span>
             <span>{progress}%</span>
           </div>
         </div>
 
         {/* Rotating tech icons */}
-        <div className="flex justify-center space-x-4 mt-8">
+        <div className="flex justify-center space-x-3 sm:space-x-4 mt-8">
           <div className="loading-icon">
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-400 to-purple-500 rounded-lg animate-spin"></div>
+            <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-r from-blue-400 to-purple-500 rounded-lg animate-spin"></div>
           </div>
           <div className="loading-icon" style={{ animationDelay: "0.2s" }}>
-            <div className="w-8 h-8 bg-gradient-to-r from-green-400 to-blue-500 rounded-lg animate-spin"></div>
+            <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-r from-green-400 to-blue-500 rounded-lg animate-spin"></div>
           </div>
           <div className="loading-icon" style={{ animationDelay: "0.4s" }}>
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-400 to-pink-500 rounded-lg animate-spin"></div>
+            <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-r from-purple-400 to-pink-500 rounded-lg animate-spin"></div>
           </div>
         </div>
       </div>

@@ -16,6 +16,7 @@ import githubIcon from "../assets/github-icon-1-logo-svgrepo-com.svg";
 import linuxIcon from "../assets/linux-svgrepo-com.svg";
 import dockerIcon from "../assets/docker-svgrepo-com.svg";
 import tsIcon from "../assets/typescript.svg";
+import cudaIcon from "../assets/cuda-svgrepo-com.svg";
 import resume from "../assets/resume.pdf";
 
 const Hero = () => {
@@ -83,20 +84,20 @@ const Hero = () => {
 
 const Technologies = () => {
   const technologies = [
-    { name: "React.js", icon: reactIcon },
+    { name: "C++", icon: cppIcon },
+    { name: "Python", icon: pythonIcon },
+    { name: "TypeScript", icon: tsIcon },
+    { name: "Cuda", icon: cudaIcon },
+    { name: "Linux", icon: linuxIcon },
+    { name: "docker", icon: dockerIcon },
     { name: "PyTorch", icon: pytorchIcon },
     { name: "OpenCV", icon: opencvIcon },
     { name: "Scikit-Learn", icon: scikitIcon },
     { name: "Pandas", icon: pandasIcon },
-    { name: "PostgreSQL", icon: postgresqlIcon },
-    { name: "Python", icon: pythonIcon },
+    { name: "React/Expo", icon: reactIcon },
     { name: "LaTeX", icon: latexIcon },
+    { name: "PostgreSQL", icon: postgresqlIcon },
     { name: "Github", icon: githubIcon },
-    { name: "C++", icon: cppIcon },
-    { name: "Java", icon: javaIcon },
-    { name: "Linux", icon: linuxIcon },
-    { name: "TypeScript", icon: tsIcon },
-    { name: "docker", icon: dockerIcon },
   ];
 
   return (

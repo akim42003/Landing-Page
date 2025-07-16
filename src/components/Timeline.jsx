@@ -19,7 +19,7 @@ const Timeline = () => {
       title: "Research Assistant",
       organization: "Boston Children's Hospital",
       description:
-        "Returned to write 3D modeling algorithms. This experience led me to explore personal projects through hackathons and experiments with computer vision.",
+        "Returned to write 3D modeling and simulation algorithms . This experience led me to explore personal projects through hackathons and experiments with machine learning.",
       category: "research",
     },
     {
@@ -37,7 +37,7 @@ const Timeline = () => {
       title: "Graduation",
       organization: "Hamilton College",
       description:
-        "Completed degree in Mathematics with a minor in Music. Culmination of four years of interdisciplinary study combining analytical and creative pursuits.",
+        "Completed degree in Mathematics with a minor in Music — A fulfilling end to four years of interdisciplinary study.",
       category: "education",
     },
   ];
@@ -69,15 +69,15 @@ const Timeline = () => {
         <p className="text-gray-400">Hover over each milestone to learn more</p>
       </div>
 
-      <div className="relative">
+      <div className="relative overflow-x-auto">
         {/* Timeline items */}
-        <div className="flex justify-between items-start relative px-4">
+        <div className="flex justify-between items-start relative px-4 md:px-4 min-w-[600px] sm:min-w-0">
           {/* Horizontal timeline line - positioned after dots */}
           <div className="absolute top-4 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
           {timelineData.map((item, index) => (
             <div
               key={item.id}
-              className="flex flex-col items-center relative timeline-item-horizontal"
+              className="flex flex-col items-center relative timeline-item-horizontal px-2 sm:px-0"
               style={{ flex: 1 }}
             >
               {/* Timeline dot */}
@@ -92,16 +92,16 @@ const Timeline = () => {
               {/* Icon and Title */}
               <div className="text-center mt-3">
                 <div className="text-2xl mb-1">{item.icon}</div>
-                <div className="text-white font-semibold text-sm leading-tight">
+                <div className="text-white font-semibold text-xs sm:text-sm leading-tight">
                   {item.title}
                 </div>
-                <div className="text-gray-400 text-xs mt-1">
+                <div className="text-gray-400 text-[10px] sm:text-xs mt-1">
                   {item.organization}
                 </div>
               </div>
 
               {/* Date */}
-              <div className="text-xs text-cyan-300 font-semibold mt-2 text-center">
+              <div className="text-[10px] sm:text-xs text-cyan-300 font-semibold mt-2 text-center">
                 {item.date}
               </div>
 
@@ -113,8 +113,8 @@ const Timeline = () => {
                     : "max-h-0 opacity-0"
                 }`}
               >
-                <div className="glass-morphism p-4 rounded-lg max-w-xs">
-                  <p className="text-gray-300 text-sm leading-relaxed">
+                <div className="glass-morphism p-3 sm:p-4 rounded-lg max-w-[200px] sm:max-w-xs mx-auto">
+                  <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">
                     {item.description}
                   </p>
                 </div>
@@ -125,18 +125,18 @@ const Timeline = () => {
       </div>
 
       {/* Legend */}
-      <div className="flex justify-center mt-8 space-x-6">
+      <div className="flex flex-wrap justify-center mt-8 gap-4 sm:gap-6">
         <div className="flex items-center space-x-2">
           <div className="w-3 h-3 rounded-full bg-gradient-to-r from-blue-400 to-cyan-500"></div>
-          <span className="text-gray-400 text-sm">Internship</span>
+          <span className="text-gray-400 text-xs sm:text-sm">Internship</span>
         </div>
         <div className="flex items-center space-x-2">
           <div className="w-3 h-3 rounded-full bg-gradient-to-r from-purple-400 to-pink-500"></div>
-          <span className="text-gray-400 text-sm">Research</span>
+          <span className="text-gray-400 text-xs sm:text-sm">Research</span>
         </div>
         <div className="flex items-center space-x-2">
           <div className="w-3 h-3 rounded-full bg-gradient-to-r from-orange-400 to-red-500"></div>
-          <span className="text-gray-400 text-sm">Education</span>
+          <span className="text-gray-400 text-xs sm:text-sm">Education</span>
         </div>
       </div>
     </div>

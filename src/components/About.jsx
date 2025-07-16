@@ -66,15 +66,20 @@ const About = () => {
               {showMore && (
                 <div className="animate-fade-in space-y-6">
                   <p className="text-gray-300 leading-relaxed">
-                    As a Data Science Intern at Boston Children's Hospital, I helped process and verify
-                    dataset quality and wrote image feature extraction programs as my first experience
-                    with computer vision. I got to see ML's impact in healthcare, contributing to 3D model
-                    segmentation pipelines and NLP treatment planning projects.
+                    As a Data Science Intern at Boston Children's Hospital, I
+                    helped process and verify dataset quality and wrote image
+                    feature extraction programs as my first experience with
+                    computer vision. I got to see ML's impact in healthcare,
+                    contributing to 3D model segmentation pipelines and NLP
+                    treatment planning projects.
                   </p>
 
                   <p className="text-gray-300 leading-relaxed">
-                    I returned the following year, writing 3D modeling algorithms. This experience led me to
-                    explore personal projects through hackathons and experiments with computer vision.
+                    I returned the following year, writing 3D modeling
+                    algorithms to simulate orthopedic procedures. This
+                    experience deepend my love for engineering and coding,
+                    ultimately leading me to explore personal projects through
+                    hackathons and experiments with machine learning.
                   </p>
 
                   <p className="text-gray-300 leading-relaxed">
@@ -82,14 +87,16 @@ const About = () => {
                     <span className="text-cyan-300 font-semibold">
                       Emerson Fellowship
                     </span>{" "}
-                    for summer 2024, developing a vocal register classification pipeline with a 
-                    musician-friendly GUI. This tool helps singers understand and apply technique, 
-                    particularly useful for my acapella group, The Buffers.
+                    for summer 2024, developing a vocal register classification
+                    pipeline with a musician-friendly GUI. This tool helps
+                    singers understand and apply technique, particularly useful
+                    for my acapella group, The Buffers.
                   </p>
 
                   <div className="research-quote">
                     <p className="text-gray-300 leading-relaxed mb-2">
-                      My formal research report from the vocal register classification project:
+                      My formal research report from the vocal register
+                      classification project:
                     </p>
                     <a
                       href="https://arxiv.org/abs/2505.11378"
@@ -97,7 +104,8 @@ const About = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      "Vocal Register Classification using Deep Learning" - arXiv:2505.11378
+                      "Vocal Register Classification using Deep Learning" -
+                      arXiv:2505.11378
                     </a>
                   </div>
 
@@ -110,7 +118,8 @@ const About = () => {
                       <span className="text-cyan-300">
                         basketball, volleyball, cooking with family, and reading
                         about computers, history, and neuroscience
-                      </span>.
+                      </span>
+                      .
                     </p>
                   </div>
                 </div>
@@ -143,7 +152,7 @@ const About = () => {
       </div>
 
       {/* Publications Section */}
-      <div className="max-w-7xl mx-auto px-6 mt-16">
+      <div id="publications" className="max-w-7xl mx-auto px-6 mt-16">
         <Publications />
       </div>
     </div>
