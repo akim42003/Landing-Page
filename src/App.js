@@ -1,11 +1,15 @@
-import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React, { useState } from "react";
+import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import LoadingScreen from "./components/LoadingScreen";
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [showContent, setShowContent] = useState(false);
+  // Check URL params to see if we should skip loading
+  const urlParams = new URLSearchParams(window.location.search);
+  const skipLoading = urlParams.get('skipLoading') === 'true' || urlParams.get('skip') === 'true';
+  
+  const [isLoading, setIsLoading] = useState(!skipLoading);
+  const [showContent, setShowContent] = useState(skipLoading);
 
   const handleLoadingComplete = () => {
     setIsLoading(false);

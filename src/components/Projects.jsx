@@ -6,7 +6,13 @@ const projectsData = [
     description:
       "A full-stack application that allows musicians of all levels to further their understanding and application of vocal technique. Built during summer 2024 through an Emerson Foundation grant, this project combines computer vision and machine learning to create a vocal register classifier using spectrograms with SVM and CNN models.",
     link: "https://github.com/akim42003/AVRA",
-    tech: ["JavaScript", "Machine Learning", "Computer Vision"],
+    tech: [
+      "Python",
+      "JavaScript/React",
+      "Scikit-Learn",
+      "Computer Vision",
+      "Pytorch",
+    ],
     featured: true,
   },
   {
@@ -14,7 +20,13 @@ const projectsData = [
     description:
       "A tensor-based machine learning library built for educational and personal purposes. This Python library provides fundamental ML algorithms and neural network implementations with a focus on learning and experimentation.",
     link: "https://github.com/akim42003/tensorkit-learn",
-    tech: ["Python", "Machine Learning", "Neural Networks"],
+    tech: [
+      "C++",
+      "Python",
+      "Machine Learning",
+      "Neural Networks",
+      "Data Structures",
+    ],
     featured: true,
   },
   {
@@ -22,7 +34,7 @@ const projectsData = [
     description:
       "A local computer use agent that automates desktop interactions and tasks through intelligent command processing. This AI-powered assistant can perform complex computer operations, file management, and application control to enhance productivity and streamline workflows.",
     link: "https://github.com/akim42003/SOFIA",
-    tech: ["Python", "AI Automation", "Computer Vision", "System Integration"],
+    tech: ["Python", "MCP", "Computer Vision", "System Integration", "LLM"],
     featured: true,
   },
   {
@@ -30,12 +42,7 @@ const projectsData = [
     description:
       "A local calorie tracking application that harnesses computer vision to assess the nutritional content of meals. Users can analyze food images to automatically calculate calories, macronutrients, and dietary information, making nutrition tracking effortless and accurate.",
     link: "https://github.com/akim42003/Visi-Cal",
-    tech: [
-      "Python",
-      "Computer Vision",
-      "Nutrition Analysis",
-      "Image Processing",
-    ],
+    tech: ["TypeScript", "React-Native"],
     featured: false,
   },
   {
@@ -51,7 +58,7 @@ const projectsData = [
     description:
       "A hardware-software project creating a music synthesizer with full 88-key piano range, multiple instrument sounds, drum pad, and real-time controls using Arduino and CircuitPython.",
     link: "https://github.com/akim42003/Multi-tool-Synthesizer-Keyboard",
-    tech: ["Python", "Arduino", "Hardware", "Music Technology"],
+    tech: ["Python", "Arduino", "Hardware"],
     featured: false,
   },
   {
@@ -59,7 +66,7 @@ const projectsData = [
     description:
       "NBA analytics tool using CNN to predict scoring likelihood from game broadcast images. Features play design interface and defensive/offensive success prediction based on court positioning.",
     link: "https://github.com/akim42003/PlayCaller.ai",
-    tech: ["Python", "Computer Vision", "Sports Analytics"],
+    tech: ["Python", "Computer Vision", "CNN finetuning"],
     featured: false,
   },
   {
@@ -67,7 +74,7 @@ const projectsData = [
     description:
       "A Python-based hands-free text editor that enables voice-controlled document editing and code writing. Features natural language processing for command interpretation, making text editing accessible and efficient through voice commands and automation.",
     link: "https://github.com/akim42003/ZQ",
-    tech: ["Python", "Speech Recognition", "NLP", "Text Processing"],
+    tech: ["Python", "Speech Recognition", "NLP"],
     featured: false,
   },
   {
@@ -75,7 +82,7 @@ const projectsData = [
     description:
       "Comprehensive NBA analytics project built for CS 307. Implements advanced statistical analysis, player performance metrics, and predictive modeling for basketball data insights and team strategy optimization.",
     link: "https://github.com/akim42003/CS_307-Final",
-    tech: ["Python", "Data Analytics", "Statistics", "Sports Analytics"],
+    tech: ["Python", "Matplotlib", "Scikit-Learn", "Neural Networks"],
     featured: false,
   },
 ];
@@ -90,24 +97,26 @@ const Projects = () => {
   useEffect(() => {
     const observerOptions = {
       threshold: 0.1,
-      rootMargin: '50px'
+      rootMargin: "50px",
     };
 
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          setVisibleElements(prev => new Set(prev).add(entry.target.dataset.id));
+          setVisibleElements((prev) =>
+            new Set(prev).add(entry.target.dataset.id),
+          );
         }
       });
     }, observerOptions);
 
-    Object.values(elementRefs.current).forEach(el => {
+    Object.values(elementRefs.current).forEach((el) => {
       if (el) observer.observe(el);
     });
 
     return () => {
       const currentRefs = elementRefs.current;
-      Object.values(currentRefs).forEach(el => {
+      Object.values(currentRefs).forEach((el) => {
         if (el) observer.unobserve(el);
       });
     };
@@ -125,11 +134,13 @@ const Projects = () => {
       <div className="w-full h-px bg-gradient-to-r from-transparent via-white/30 to-transparent my-16"></div>
 
       <div className="max-w-7xl mx-auto px-6">
-        <div 
-          ref={el => elementRefs.current['header'] = el}
+        <div
+          ref={(el) => (elementRefs.current["header"] = el)}
           data-id="header"
           className={`text-center mb-16 transition-all duration-700 ease-out ${
-            visibleElements.has('header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            visibleElements.has("header")
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-8"
           }`}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -149,12 +160,12 @@ const Projects = () => {
           {featuredProjects.map((project, index) => (
             <div
               key={index}
-              ref={el => elementRefs.current[`featured-${index}`] = el}
+              ref={(el) => (elementRefs.current[`featured-${index}`] = el)}
               data-id={`featured-${index}`}
               className={`glass-morphism rounded-2xl group transition-all duration-700 ease-out ${
-                visibleElements.has(`featured-${index}`) 
-                  ? 'opacity-100 scale-100' 
-                  : 'opacity-0 scale-95'
+                visibleElements.has(`featured-${index}`)
+                  ? "opacity-100 scale-100"
+                  : "opacity-0 scale-95"
               } hover:transform hover:-translate-y-2 hover:shadow-2xl`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
@@ -222,12 +233,12 @@ const Projects = () => {
             return (
               <div
                 key={index}
-                ref={el => elementRefs.current[`other-${index}`] = el}
+                ref={(el) => (elementRefs.current[`other-${index}`] = el)}
                 data-id={`other-${index}`}
                 className={`glass-morphism rounded-xl p-6 group transition-all duration-500 ease-out ${
-                  visibleElements.has(`other-${index}`) 
-                    ? 'opacity-100 translate-y-0' 
-                    : 'opacity-0 translate-y-4'
+                  visibleElements.has(`other-${index}`)
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-4"
                 } hover:transform hover:-translate-y-1 hover:shadow-xl`}
                 style={{ transitionDelay: `${Math.min(index * 50, 300)}ms` }}
               >
