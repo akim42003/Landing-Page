@@ -2,20 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 
 const projectsData = [
   {
-    title: "AVRA - Automatic Vocal Register Analysis",
-    description:
-      "A full-stack application that allows musicians of all levels to further their understanding and application of vocal technique. Built during summer 2024 through an Emerson Foundation grant, this project combines computer vision and machine learning to create a vocal register classifier using spectrograms with SVM and CNN models.",
-    link: "https://github.com/akim42003/AVRA",
-    tech: [
-      "Python",
-      "JavaScript/React",
-      "Scikit-Learn",
-      "Computer Vision",
-      "Pytorch",
-    ],
-    featured: true,
-  },
-  {
     title: "TensorKit-Learn",
     description:
       "A tensor-based machine learning library built for educational and personal purposes. This Python library provides fundamental ML algorithms and neural network implementations with a focus on learning and experimentation.",
@@ -32,9 +18,23 @@ const projectsData = [
   {
     title: "SOFIA",
     description:
-      "A local computer use agent that automates desktop interactions and tasks through intelligent command processing. This AI-powered assistant can perform complex computer operations, file management, and application control to enhance productivity and streamline workflows.",
+      "A local computer use agent that automates desktop interactions and tasks through intelligent tool calling and OCR. This AI-powered assistant can perform complex computer operations, file management, and application control to enhance productivity and streamline workflows.",
     link: "https://github.com/akim42003/SOFIA",
     tech: ["Python", "MCP", "Computer Vision", "System Integration", "LLM"],
+    featured: true,
+  },
+  {
+    title: "AVRA - Automatic Vocal Register Analysis",
+    description:
+      "A full-stack application that allows musicians of all levels to further their understanding and application of vocal technique. Built during summer 2024 through an Emerson Foundation grant, this project combines computer vision and machine learning to create a vocal register classifier using spectrograms with SVM and CNN models.",
+    link: "https://github.com/akim42003/AVRA",
+    tech: [
+      "Python",
+      "JavaScript/React",
+      "Scikit-Learn",
+      "Computer Vision",
+      "Pytorch",
+    ],
     featured: true,
   },
   {
