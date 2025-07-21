@@ -40,8 +40,8 @@ const projectsData = [
   {
     title: "HandyFit",
     description:
-      "A local calorie tracking application that harnesses computer vision to assess the nutritional content of meals. Users can analyze food images to automatically calculate calories, macronutrients, and dietary information, making nutrition tracking effortless and accurate.",
-    link: "https://github.com/akim42003/HandyFit---Nutrition-and-Fitness-App",
+      "Now on the App Store!A local calorie tracking application that harnesses computer vision to assess the nutritional content of meals. Users can analyze food images to automatically calculate calories, macronutrients, and dietary information, making nutrition tracking effortless and accurate.",
+    link: "https://apps.apple.com/us/app/handyfit/id6748508963",
     tech: ["TypeScript", "React-Native"],
     featured: false,
   },
