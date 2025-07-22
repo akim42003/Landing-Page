@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import LoadingScreen from "./components/LoadingScreen";
+import Navbar from "./components/Navbar";
 
 function App() {
   // Check URL params to see if we should skip loading
@@ -22,11 +23,14 @@ function App() {
     <div>
       {isLoading && <LoadingScreen onLoadingComplete={handleLoadingComplete} />}
       {showContent && (
-        <div className="page-enter page-enter-active">
-          <Routes>
-            <Route path="/" element={<Home />} />
-          </Routes>
-        </div>
+        <>
+          <Navbar />
+          <div className="page-enter page-enter-active">
+            <Routes>
+              <Route path="/" element={<Home />} />
+            </Routes>
+          </div>
+        </>
       )}
     </div>
   );

@@ -1,5 +1,4 @@
 import React from 'react';
-import Navbar from './Navbar';
 import Footer from './Footer';
 import About from './About';
 import Hero from './Hero';
@@ -8,8 +7,7 @@ import Projects from './Projects';
 const Home = () => {
   return (
     <div>
-        <Navbar />
-        <div id="home">
+        <div id="home" className="pt-20">
           <Hero />
         </div>
         <div id="about">
