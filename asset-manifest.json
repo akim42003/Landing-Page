@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.6b6507a6.css",
-    "main.js": "/static/js/main.47585503.js",
+    "main.css": "/static/css/main.11a1d641.css",
+    "main.js": "/static/js/main.487828b4.js",
     "static/media/selfie.jpeg": "/static/media/selfie.265697d3f8d716d04b19.jpeg",
     "static/media/lebron.jpg": "/static/media/lebron.85f0c022c308fac40a48.jpg",
     "static/media/resume.pdf": "/static/media/resume.98a40051e67726cb2592.pdf",
@@ -21,11 +21,11 @@
     "static/media/Pandas.svg": "/static/media/Pandas.5a48d1677b40ca61e96a08e92fdbb64d.svg",
     "index.html": "/index.html",
     "static/media/react.svg": "/static/media/react.b946632138100ea159504d065878af79.svg",
-    "main.6b6507a6.css.map": "/static/css/main.6b6507a6.css.map",
-    "main.47585503.js.map": "/static/js/main.47585503.js.map"
+    "main.11a1d641.css.map": "/static/css/main.11a1d641.css.map",
+    "main.487828b4.js.map": "/static/js/main.487828b4.js.map"
   },
   "entrypoints": [
-    "static/css/main.6b6507a6.css",
-    "static/js/main.47585503.js"
+    "static/css/main.11a1d641.css",
+    "static/js/main.487828b4.js"
   ]
 }
