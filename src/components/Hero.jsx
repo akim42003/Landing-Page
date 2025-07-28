@@ -17,7 +17,7 @@ import linuxIcon from "../assets/linux-svgrepo-com.svg";
 import dockerIcon from "../assets/docker-svgrepo-com.svg";
 import tsIcon from "../assets/typescript.svg";
 import cudaIcon from "../assets/cuda-svgrepo-com.svg";
-import resume from "../assets/resume.pdf";
+import resume from "../assets/swe_resume.pdf";
 
 const Hero = () => {
   return (
