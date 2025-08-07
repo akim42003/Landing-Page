@@ -37,20 +37,20 @@ const projectsData = [
       "A full-stack application that allows musicians of all levels to further their understanding and application of vocal technique. Built during summer 2024 through an Emerson Foundation grant, this project combines computer vision and machine learning to create a vocal register classifier using spectrograms with SVM and CNN models.",
     link: "https://github.com/akim42003/AVRA",
     tech: [
-      "Python",
-      "JavaScript/React",
+      "Pytorch",
+      "React.js",
       "Scikit-Learn",
       "Computer Vision",
-      "Pytorch",
+      ,
     ],
     featured: false,
   },
   {
     title: "HandyFit",
     description:
-      "Now on the App Store!A local calorie tracking application that harnesses computer vision to assess the nutritional content of meals. Users can analyze food images to automatically calculate calories, macronutrients, and dietary information, making nutrition tracking effortless and accurate.",
+      "Now on the App Store! A local calorie tracking application that harnesses computer vision to assess the nutritional content of meals. Users can analyze food images to automatically calculate calories, macronutrients, and dietary information, making nutrition tracking effortless and accurate.",
     link: "https://apps.apple.com/us/app/handyfit/id6748508963",
-    tech: ["TypeScript", "React-Native"],
+    tech: ["TypeScript", "React-Native", "Xcode"],
     featured: false,
   },
   {
@@ -58,7 +58,7 @@ const projectsData = [
     description:
       "NBA analytics tool using CNN to predict scoring likelihood from game broadcast images. Features play design interface and defensive/offensive success prediction based on court positioning.",
     link: "https://github.com/akim42003/PlayCaller.ai",
-    tech: ["Python", "Computer Vision", "CNN finetuning"],
+    tech: ["Pytorch", "React.js", "Computer Vision", "CNN finetuning"],
     featured: false,
   },
   {
@@ -74,7 +74,7 @@ const projectsData = [
     description:
       "The orthopedic surgical simulation library I developed at BCH/HMS in 2023 (part of the Virtual Hip project).",
     link: "https://github.com/akim42003/virtual-pao-vro",
-    tech: ["Python, MeshLab, scipy, blender, unsupervised-learning"],
+    tech: ["Unsupervised-Learning", "MeshLab", "scipy", "Python"],
   },
   {
     title: "ZQ",
