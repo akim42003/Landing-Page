@@ -11,7 +11,7 @@ const Timeline = () => {
       organization: "Boston Children's Hospital",
       description:
         "Helped process and verify dataset quality and wrote image feature extraction programs as my first experience with computer vision. Contributed to 3D model segmentation pipelines and weakly-supervised intermediate domain adaptation NER project.",
-      category: "internship",
+      category: "research",
     },
     {
       id: 2,
@@ -47,12 +47,22 @@ const Timeline = () => {
       organization: "tmc",
       description:
         "Joined The Money Company in March 2025 to develop reciept parsing OCR pipelines and mobile app. Containerized sanic OCR server with Docker, and created the mobile app with React Native.",
+      category: "internship/job",
+    },
+    {
+      id: 6,
+      date: "August 2025",
+      title: "Project Manager",
+      organization: "Epic Systems",
+      description:
+        "Implementation Specialist on the Resolute Hospital Billing team.",
+      category: "internship/job",
     },
   ];
 
   const getCategoryColor = (category) => {
     switch (category) {
-      case "internship":
+      case "internship/job":
         return "from-blue-400 to-cyan-500";
       case "research":
         return "from-purple-400 to-pink-500";
@@ -136,7 +146,9 @@ const Timeline = () => {
       <div className="flex flex-wrap justify-center mt-8 gap-4 sm:gap-6">
         <div className="flex items-center space-x-2">
           <div className="w-3 h-3 rounded-full bg-gradient-to-r from-blue-400 to-cyan-500"></div>
-          <span className="text-gray-400 text-xs sm:text-sm">Internship</span>
+          <span className="text-gray-400 text-xs sm:text-sm">
+            Work Experience
+          </span>
         </div>
         <div className="flex items-center space-x-2">
           <div className="w-3 h-3 rounded-full bg-gradient-to-r from-purple-400 to-pink-500"></div>
