@@ -10,7 +10,7 @@ const Timeline = () => {
       title: "Research Intern -- Data Science",
       organization: "Boston Children's Hospital",
       description:
-        "Helped process and verify dataset quality and wrote image feature extraction programs as my first experience with computer vision. Contributed to 3D model segmentation pipelines and NLP treatment planning projects.",
+        "Helped process and verify dataset quality and wrote image feature extraction programs as my first experience with computer vision. Contributed to 3D model segmentation pipelines and weakly-supervised intermediate domain adaptation NER project.",
       category: "internship",
     },
     {
@@ -19,7 +19,7 @@ const Timeline = () => {
       title: "Research Intern -- Algorithm Development",
       organization: "Boston Children's Hospital",
       description:
-        "Returned to write 3D modeling and simulation algorithms . This experience led me to explore personal projects through hackathons and experiments with machine learning.",
+        "Returned to write 3D modeling and simulation algorithms for periacetabular osteotomy and varus derotational osteotomy procedures as part of the VirtualHip project. Employed unsupervised-KNN for mesh repair pre-processing before surgical simulation.",
       category: "research",
     },
     {
@@ -39,6 +39,14 @@ const Timeline = () => {
       description:
         "Completed degree in Mathematics with a minor in Music — A fulfilling end to four years of interdisciplinary study.",
       category: "education",
+    },
+    {
+      id: 5,
+      date: "March-July 2025",
+      title: "ML Software Engineer",
+      organization: "tmc",
+      description:
+        "Joined The Money Company in March 2025 to develop reciept parsing OCR pipelines and mobile app. Containerized sanic OCR server with Docker, and created the mobile app with React Native.",
     },
   ];
 
