@@ -7,7 +7,7 @@ const Timeline = () => {
     {
       id: 1,
       date: "Summer-Fall 2022",
-      title: "Data Science Intern",
+      title: "Research Intern -- Data Science",
       organization: "Boston Children's Hospital",
       description:
         "Helped process and verify dataset quality and wrote image feature extraction programs as my first experience with computer vision. Contributed to 3D model segmentation pipelines and NLP treatment planning projects.",
@@ -16,7 +16,7 @@ const Timeline = () => {
     {
       id: 2,
       date: "Summer 2023",
-      title: "Research Assistant",
+      title: "Research Intern -- Algorithm Development",
       organization: "Boston Children's Hospital",
       description:
         "Returned to write 3D modeling and simulation algorithms . This experience led me to explore personal projects through hackathons and experiments with machine learning.",

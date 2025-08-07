@@ -18,6 +18,7 @@ import dockerIcon from "../assets/docker-svgrepo-com.svg";
 import tsIcon from "../assets/typescript.svg";
 import cudaIcon from "../assets/cuda-svgrepo-com.svg";
 import resume from "../assets/swe_resume.pdf";
+import academic_cv from "../assets/CV_1_col.pdf";
 
 const Hero = () => {
   return (
@@ -48,14 +49,19 @@ const Hero = () => {
               electronics across diverse disciplines.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <a href="#projects">
-                <button className="glass-morphism hover-lift px-8 py-4 rounded-xl font-semibold text-white border border-white/20 hover:bg-white/10 transition-all duration-300">
-                  View Projects
+              <a href={academic_cv} target="_blank" rel="noopener noreferrer">
+                <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 px-8 py-4 rounded-xl font-semibold text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                  Academic CV
                 </button>
               </a>
               <a href={resume} target="_blank" rel="noopener noreferrer">
                 <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 px-8 py-4 rounded-xl font-semibold text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                   Resume
+                </button>
+              </a>
+              <a href="#projects">
+                <button className="glass-morphism hover-lift px-8 py-4 rounded-xl font-semibold text-white border border-white/20 hover:bg-white/10 transition-all duration-300">
+                  View Projects
                 </button>
               </a>
             </div>

@@ -66,12 +66,12 @@ const About = () => {
               {showMore && (
                 <div className="animate-fade-in space-y-6">
                   <p className="text-gray-300 leading-relaxed">
-                    As a Data Science Intern at Boston Children's Hospital, I
-                    helped process and verify dataset quality and wrote image
-                    feature extraction programs as my first experience with
-                    computer vision. I got to see ML's impact in healthcare,
-                    contributing to 3D model segmentation pipelines and NLP
-                    treatment planning projects.
+                    As a Research Intern at Boston Children's Hospital, I helped
+                    process and verify dataset quality and wrote image feature
+                    extraction programs as my first experience with computer
+                    vision. I got to see ML's impact in healthcare, contributing
+                    to 3D model segmentation pipelines and NLP treatment
+                    planning projects.
                   </p>
 
                   <p className="text-gray-300 leading-relaxed">
