@@ -2,6 +2,22 @@ import React, { useState, useEffect, useRef } from "react";
 
 const projectsData = [
   {
+    title: "LIOS--LLM Integrated OS",
+    description:
+      "Unix-based and domain targeted for local LLM's, LIOS is my attempt to refine my computer architecture and C skills in a fun way. Status: Under construction.",
+    link: "https://github.com/akim42003/LIOS--LLM-Integrated-OS",
+    tech: ["Assembly", "C", "QEMU", "Computer Architecture"],
+    featured: true,
+  },
+  {
+    title: "SOFIA",
+    description:
+      "A local computer use agent that automates desktop interactions and tasks through intelligent tool calling and OCR. This AI-powered assistant can perform complex computer operations, file management, and application control to enhance productivity and streamline workflows.",
+    link: "https://github.com/akim42003/SOFIA",
+    tech: ["Python", "MCP", "Computer Vision", "System Integration", "LLM"],
+    featured: true,
+  },
+  {
     title: "TensorKit-Learn",
     description:
       "A tensor-based machine learning library built for educational and personal purposes. This Python library provides fundamental ML algorithms and neural network implementations with a focus on learning and experimentation.",
@@ -16,14 +32,6 @@ const projectsData = [
     featured: true,
   },
   {
-    title: "SOFIA",
-    description:
-      "A local computer use agent that automates desktop interactions and tasks through intelligent tool calling and OCR. This AI-powered assistant can perform complex computer operations, file management, and application control to enhance productivity and streamline workflows.",
-    link: "https://github.com/akim42003/SOFIA",
-    tech: ["Python", "MCP", "Computer Vision", "System Integration", "LLM"],
-    featured: true,
-  },
-  {
     title: "AVRA - Automatic Vocal Register Analysis",
     description:
       "A full-stack application that allows musicians of all levels to further their understanding and application of vocal technique. Built during summer 2024 through an Emerson Foundation grant, this project combines computer vision and machine learning to create a vocal register classifier using spectrograms with SVM and CNN models.",
@@ -35,7 +43,7 @@ const projectsData = [
       "Computer Vision",
       "Pytorch",
     ],
-    featured: true,
+    featured: false,
   },
   {
     title: "HandyFit",
@@ -46,11 +54,11 @@ const projectsData = [
     featured: false,
   },
   {
-    title: "Flappy Bot",
+    title: "PlayCaller.ai",
     description:
-      "A Deep Q-Learning agent that plays Flappy Bird using reinforcement learning. This project demonstrates the application of DQN algorithms to game environments with impressive performance results.",
-    link: "https://github.com/akim42003/Flappy-Bird-Free-For-All",
-    tech: ["Python", "Deep Learning", "Reinforcement Learning"],
+      "NBA analytics tool using CNN to predict scoring likelihood from game broadcast images. Features play design interface and defensive/offensive success prediction based on court positioning.",
+    link: "https://github.com/akim42003/PlayCaller.ai",
+    tech: ["Python", "Computer Vision", "CNN finetuning"],
     featured: false,
   },
   {
@@ -62,12 +70,11 @@ const projectsData = [
     featured: false,
   },
   {
-    title: "PlayCaller.ai",
+    title: "Virtual PAO and VRO",
     description:
-      "NBA analytics tool using CNN to predict scoring likelihood from game broadcast images. Features play design interface and defensive/offensive success prediction based on court positioning.",
-    link: "https://github.com/akim42003/PlayCaller.ai",
-    tech: ["Python", "Computer Vision", "CNN finetuning"],
-    featured: false,
+      "The orthopedic surgical simulation library I developed at BCH/HMS in 2023 (part of the Virtual Hip project).",
+    link: "https://github.com/akim42003/virtual-pao-vro",
+    tech: ["Python, MeshLab, scipy, blender, unsupervised-learning"],
   },
   {
     title: "ZQ",
@@ -83,6 +90,14 @@ const projectsData = [
       "Comprehensive NBA analytics project built for CS 307. Implements advanced statistical analysis, player performance metrics, and predictive modeling for basketball data insights and team strategy optimization.",
     link: "https://github.com/akim42003/nba-prospect-potential",
     tech: ["Python", "Matplotlib", "Scikit-Learn", "Neural Networks"],
+    featured: false,
+  },
+  {
+    title: "Flappy Bot",
+    description:
+      "A Deep Q-Learning agent that plays Flappy Bird using reinforcement learning. This project demonstrates the application of DQN algorithms to game environments with impressive performance results.",
+    link: "https://github.com/akim42003/Flappy-Bird-Free-For-All",
+    tech: ["Python", "Deep Learning", "Reinforcement Learning"],
     featured: false,
   },
 ];
