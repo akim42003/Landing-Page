@@ -10,7 +10,6 @@ import postgresqlIcon from "../assets/PostgresSQL.svg";
 import pythonIcon from "../assets/Python.svg";
 import latexIcon from "../assets/LaTeX.svg";
 import cppIcon from "../assets/C++ (CPlusPlus).svg";
-import javaIcon from "../assets/Java.svg";
 import opencvIcon from "../assets/opencv.svg";
 import githubIcon from "../assets/github-icon-1-logo-svgrepo-com.svg";
 import linuxIcon from "../assets/linux-svgrepo-com.svg";
@@ -45,8 +44,8 @@ const Hero = () => {
             </h2>
             <p className="text-lg text-gray-300 leading-relaxed max-w-lg">
               Hi I'm Alex! I enjoy building things with data, sports, and math.
-              I create purposeful full-stack applications, ML models, and
-              electronics across diverse disciplines.
+              I create full-stack applications, ML/AI solutions, and
+              electronics to learn, and solve solve problems across diverse disciplines.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <a href={academic_cv} target="_blank" rel="noopener noreferrer">
