@@ -41,17 +41,18 @@ const About = () => {
               </div>
 
               <p className="text-gray-300 leading-relaxed text-lg">
-                Ever since I can remember, I've had a passion for creating
-                things—whether it's through music, legos, or lines of code.
-                Despite the transition from student to working professional, not
-                much has changed. I spent my summer interning with tmc, enjoying
-                time with friends and family, and building products I am
-                passionate about.
+                Ever since I can remember, I've had a passion for learning and
+                creating things—whether it's through music, legos, or lines of
+                code. Despite the transition from student to working
+                professional, not much has changed. I spent my summer building
+                with tmc, enjoying time with friends and family, finishing
+                long-term passion projects, and researching areas of computing I
+                could get better at.
               </p>
 
               <div className="achievement-block">
                 <h3 className="text-xl font-semibold text-white mb-2">
-                  Machine Learning Journey
+                  Machine Learning and Research Journey
                 </h3>
                 <p className="text-gray-300 leading-relaxed">
                   I first fell in love with the possibilities of machine
@@ -69,9 +70,10 @@ const About = () => {
                     As a Research Intern at Boston Children's Hospital, I helped
                     process and verify dataset quality and wrote image feature
                     extraction programs as my first experience with computer
-                    vision. I got to see ML's impact in healthcare, contributing
-                    to 3D model segmentation pipelines and NLP treatment
-                    planning projects.
+                    vision. I got my first glimpse into the impact of ML/AI in
+                    healthcare, contributing to 3D model segmentation pipelines
+                    and NLP treatment planning projects through a
+                    weakly-supervised domain adaptation project.
                   </p>
 
                   <p className="text-gray-300 leading-relaxed">
@@ -83,19 +85,21 @@ const About = () => {
                   </p>
 
                   <p className="text-gray-300 leading-relaxed">
-                    The summer after my Junior year, I was granted an{" "}
+                    The joy of independent creation and learning inspired me to
+                    pursue the{" "}
                     <span className="text-cyan-300 font-semibold">
                       Emerson Fellowship
                     </span>{" "}
-                    for summer 2024, developing a vocal register classification
-                    pipeline with a musician-friendly GUI. This tool helps
-                    singers understand and apply technique, particularly useful
-                    for my acapella group, The Buffers.
+                    at Hamilton for summer 2024. With this grant, I developed a
+                    vocal register classification pipeline with a
+                    musician-friendly GUI. This tool helps singers understand
+                    and apply technique, particularly useful for my acapella
+                    group, The Buffers.
                   </p>
 
                   <div className="research-quote">
                     <p className="text-gray-300 leading-relaxed mb-2">
-                      My formal research report from the vocal register
+                      My formal research pre-print from the vocal register
                       classification project:
                     </p>
                     <a
@@ -104,22 +108,55 @@ const About = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      "Vocal Register Classification using Deep Learning" -
-                      arXiv:2505.11378
+                      "Machine Learning Approaches to Vocal Register
+                      Classification in Contemporary Male Pop Music
                     </a>
                   </div>
 
                   <div className="achievement-block">
                     <h3 className="text-xl font-semibold text-white mb-2">
-                      Beyond Code
+                      Into 2026 and beyond!
+                    </h3>
+                    <p className="text-gray-300 leading-relaxed">
+                      Looking toward the opportunities post-college, I am
+                      excited about applying to CS and Bioinformatics PhD
+                      programs this upcoming cycle, and learning the ins and
+                      outs of Epic's EHR's in the U.S. healthcare system.
+                      <span className="text-cyan-300 font-semibold">
+                        <p>
+                          <br></br>I'm particularly interested in developments
+                          with NLP/LLM domain adaptation in clinical spaces, and
+                          multi-modal bioinformatics.
+                        </p>
+                      </span>
+                    </p>
+                  </div>
+                  <p className="text-gray-300 leading-relaxed">
+                    Since graduating, I finished up the mlp method for my C++
+                    powered, tensor-based ML library, tensorkit-learn, and
+                    writing google suite tools, and tweaking the OmniParser OCR
+                    method for my computer-use agent SOFIA.
+                    <br></br>
+                    <br></br>
+                    Additionally, I worked with tmc to develop their OCR
+                    pipeline and mobile app before starting my Project
+                    Management job at Epic Systems. Recently, I have been
+                    exploring an OS development passion project (see LIOS below)
+                    and reading about CUDA Kernels and Optimization in my time
+                    after work.
+                  </p>
+                  <p className="text-gray-300 leading-relaxed"></p>
+                  <div className="achievement-block">
+                    <h3 className="text-xl font-semibold text-white mb-2">
+                      Life Offline
                     </h3>
                     <p className="text-gray-300 leading-relaxed">
                       Outside of coding and music, I enjoy{" "}
                       <span className="text-cyan-300">
-                        basketball, volleyball, cooking with family, and reading
-                        about computers, history, and neuroscience
+                        basketball and volleyball in all forms, cooking with
+                        family, running and lifting, and reading about
+                        computers, history and neuroscience.
                       </span>
-                      .
                     </p>
                   </div>
                 </div>
