@@ -47,7 +47,7 @@ const About = () => {
                 professional, not much has changed. I spent my summer building
                 with tmc, enjoying time with friends and family, finishing
                 long-term passion projects, and researching areas of computing I
-                could get better at.
+                want to improve in.
               </p>
 
               <div className="achievement-block">
