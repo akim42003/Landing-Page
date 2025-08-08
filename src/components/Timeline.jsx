@@ -7,7 +7,7 @@ const Timeline = () => {
     {
       id: 1,
       date: "Summer-Fall 2022",
-      title: "Research Intern -- Data Science",
+      title: "Research Intern (Data Science)",
       organization: "Boston Children's Hospital",
       description:
         "Helped process and verify dataset quality and wrote image feature extraction programs as my first experience with computer vision. Contributed to 3D model segmentation pipelines and weakly-supervised intermediate domain adaptation NER project.",
@@ -16,7 +16,7 @@ const Timeline = () => {
     {
       id: 2,
       date: "Summer 2023",
-      title: "Research Intern -- Algorithm Development",
+      title: "Research Intern (Algorithms)",
       organization: "Boston Children's Hospital",
       description:
         "Returned to write 3D modeling and simulation algorithms for periacetabular osteotomy and varus derotational osteotomy procedures as part of the VirtualHip project. Employed unsupervised-KNN for mesh repair pre-processing before surgical simulation.",
@@ -90,8 +90,8 @@ const Timeline = () => {
       <div className="relative overflow-x-auto">
         {/* Timeline items */}
         <div className="flex justify-between items-start relative px-4 md:px-4 min-w-[600px] sm:min-w-0">
-          {/* Horizontal timeline line - positioned after dots */}
-          <div className="absolute top-4 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
+          {/* Horizontal timeline line - positioned under dates */}
+          <div className="absolute top-6 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
           {timelineData.map((item, index) => (
             <div
               key={item.id}
