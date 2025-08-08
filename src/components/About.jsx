@@ -108,7 +108,7 @@ const About = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      "Machine Learning Approaches to Vocal Register
+                      Machine Learning Approaches to Vocal Register
                       Classification in Contemporary Male Pop Music
                     </a>
                   </div>
