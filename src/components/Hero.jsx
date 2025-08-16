@@ -45,7 +45,7 @@ const Hero = () => {
             <p className="text-lg text-gray-300 leading-relaxed max-w-lg">
               Hi I'm Alex! I enjoy building things with data, sports, and math.
               I create full-stack applications, ML/AI solutions, and
-              electronics to learn, and solve solve problems across diverse disciplines.
+              electronics to learn, and solve problems across diverse disciplines and research areas.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <a href={academic_cv} target="_blank" rel="noopener noreferrer">
@@ -58,7 +58,7 @@ const Hero = () => {
                   Resume
                 </button>
               </a>
-              <a href="#projects">
+	  <a href="#projects">
                 <button className="glass-morphism hover-lift px-8 py-4 rounded-xl font-semibold text-white border border-white/20 hover:bg-white/10 transition-all duration-300">
                   View Projects
                 </button>
