@@ -1,35 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Publications = () => {
+  const [showAll, setShowAll] = useState(false);
+  
   const publications = [
     {
       id: 1,
       title:
+        "Large Language Models for Zero-Shot Procedure Extraction in Orthopedic Surgery: A Comparative Evaluation",
+      authors: "Alexander Kim, et al.",
+      venue: "medRixv",
+      year: "2025",
+      link: "https://www.medrxiv.org/content/10.1101/2025.08.19.25333995v2",
+      description:
+        "Survey of LLM's for zero-shot orthopedic procedure prediction and feature extraction.",
+    },
+    {
+      id: 2,
+      title:
         "Machine Learning Approaches to Vocal Register Classification in Contemporary Male Pop Music",
       authors: "Alexander Kim, Charlotte Botha",
-      venue: "arXiv preprint",
+      venue: "Journal of New Music Research (submitted)",
       year: "2025",
       link: "https://arxiv.org/abs/2505.11378",
       description:
         "Methods for classifying vocal registers in male pop music audio signals using mel-spectrogram image analysis. Introduces AVRA (Automatic Vocal Register Analysis) software using SVM and CNN models for consistent vocal register classification.",
     },
     {
-      id: 2,
+      id: 3,
       title:
         "Intermediate Domain Finetuning for Weakly Supervised Domain-adaptive Clinical NER",
-      authors:
-        "Shilpa Suresh, Nazgol Tavabi, Shahriar Golchin, Leah Gilreath, Rafael Garcia-Andujar, Alexander Kim, Joseph Murray, Blake Bacevich, Ata Kiapour",
-      venue: "BioNLP Workshop at ACL 2023",
+      authors: "Alexander Kim, et al.",
+      venue: "ACL Anthology Bio NLP",
       year: "2023",
       link: "https://aclanthology.org/2023.bionlp-1.29/",
       description:
         "Proposes InterDAPT framework that leverages Intermediate Domain Finetuning to allow language models to adapt to narrow clinical domains with small, noisy datasets for Named Entity Recognition.",
     },
     {
-      id: 3,
+      id: 4,
       title:
         "Prevalence and Predictors of Concomitant Meniscal and Ligamentous Injuries Associated With ACL Surgery: An Analysis of 20 Years of ACL Reconstruction at a Tertiary Care Children’s Hospital",
-      authors: "Alex Kim, et al.",
+      authors: "Alexander Kim, et al.",
       venue: "The American Journal of Sports Medicine",
       year: "2023",
       link: "https://journals.sagepub.com/doi/full/10.1177/03635465231205556",
@@ -37,9 +49,9 @@ const Publications = () => {
         "Application of NLP to extract clinical variables from 20 years of ACL procedure notes to understand the prevalance of cocomitant injuries.",
     },
     {
-      id: 4,
+      id: 5,
       title: "Distracted Driving Laws and Motor Vehicle Crash Fatalities",
-      authors: "Alex Kim, et al.",
+      authors: "Alexander Kim, et al.",
       venue: "Pediatrics",
       year: "2020",
       link: "https://publications.aap.org/pediatrics/article-abstract/145/6/e20193621/76936/Distracted-Driving-Laws-and-Motor-Vehicle-Crash?redirectedFrom=fulltext",
@@ -47,6 +59,8 @@ const Publications = () => {
         "A retrospective time-series analysis of fatal MVC's in the United States involving teenagers, and multivariage negative binomial regression analysis to compare MVC rates across states with different distracted driving laws.",
     },
   ];
+
+  const displayedPublications = showAll ? publications : publications.slice(0, 3);
 
   return (
     <div className="w-full py-8">
@@ -62,7 +76,7 @@ const Publications = () => {
       </div>
 
       <div className="space-y-6">
-        {publications.map((pub) => {
+        {displayedPublications.map((pub) => {
           return (
             <div
               key={pub.id}
@@ -117,6 +131,30 @@ const Publications = () => {
           );
         })}
       </div>
+
+      {publications.length > 3 && (
+        <div className="text-center mt-8">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 rounded-lg font-medium text-white transition-all duration-200 transform hover:scale-105"
+          >
+            {showAll ? "Show Less" : "Show More"}
+            <svg
+              className={`w-4 h-4 ml-2 transition-transform duration-300 ${showAll ? "rotate-180" : ""}`}
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+        </div>
+      )}
     </div>
   );
 };
