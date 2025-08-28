@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.089b7faf.css",
-    "main.js": "/static/js/main.80641780.js",
+    "main.css": "/static/css/main.5249b07f.css",
+    "main.js": "/static/js/main.18a80c6b.js",
     "static/media/selfie.jpeg": "/static/media/selfie.265697d3f8d716d04b19.jpeg",
     "static/media/CV_1_col.pdf": "/static/media/CV_1_col.16818765c758b331fba9.pdf",
     "static/media/swe_resume.pdf": "/static/media/swe_resume.1d29f4348630f95b7426.pdf",
@@ -14,18 +14,18 @@
     "static/media/github-icon-1-logo-svgrepo-com.svg": "/static/media/github-icon-1-logo-svgrepo-com.cbbdd0c902376ddb076c5a0cd253936d.svg",
     "static/media/docker-svgrepo-com.svg": "/static/media/docker-svgrepo-com.c18b0ce050e1632fb6b039866fc7a0a4.svg",
     "static/media/LaTeX.svg": "/static/media/LaTeX.e285428eb87473e33b5b7dcd38fbdcbe.svg",
+    "static/media/epic_systems.svg": "/static/media/epic_systems.4c1289e46b7445bb0a02c28222d19251.svg",
     "static/media/C++ (CPlusPlus).svg": "/static/media/C++ (CPlusPlus).617c9a8bb301f69b558a86e12a325806.svg",
     "static/media/cuda-svgrepo-com.svg": "/static/media/cuda-svgrepo-com.eb2beb65a9f282d3594c12b02fd4bc78.svg",
     "static/media/typescript.svg": "/static/media/typescript.a6305a733dd55243980aec55f96f70c5.svg",
     "static/media/pytorch.svg": "/static/media/pytorch.9189bc89c46f3a5c93f3ecbd88127211.svg",
-    "static/media/Pandas.svg": "/static/media/Pandas.5a48d1677b40ca61e96a08e92fdbb64d.svg",
     "index.html": "/index.html",
     "static/media/react.svg": "/static/media/react.b946632138100ea159504d065878af79.svg",
-    "main.089b7faf.css.map": "/static/css/main.089b7faf.css.map",
-    "main.80641780.js.map": "/static/js/main.80641780.js.map"
+    "main.5249b07f.css.map": "/static/css/main.5249b07f.css.map",
+    "main.18a80c6b.js.map": "/static/js/main.18a80c6b.js.map"
   },
   "entrypoints": [
-    "static/css/main.089b7faf.css",
-    "static/js/main.80641780.js"
+    "static/css/main.5249b07f.css",
+    "static/js/main.18a80c6b.js"
   ]
 }
