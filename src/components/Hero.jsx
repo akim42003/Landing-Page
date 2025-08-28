@@ -99,11 +99,11 @@ const Technologies = () => {
     { name: "PyTorch", icon: pytorchIcon },
     { name: "OpenCV", icon: opencvIcon },
     { name: "Scikit-Learn", icon: scikitIcon },
-    { name: "Epic EHR", icon: epicIcon },
     { name: "React/Expo", icon: reactIcon },
     { name: "LaTeX", icon: latexIcon },
     { name: "PostgreSQL", icon: postgresqlIcon },
     { name: "Github", icon: githubIcon },
+    { name: "Epic EHR", icon: epicIcon },
   ];
 
   return (
