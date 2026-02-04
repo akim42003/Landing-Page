@@ -35,6 +35,7 @@
 			<li><a href="#home" on:click={closeMenu}>Home</a></li>
 			<li><a href="#about" on:click={closeMenu}>About</a></li>
 			<li><a href="#projects" on:click={closeMenu}>Projects</a></li>
+			<li><a href="#publications" on:click={closeMenu}>Publications</a></li>
 		</ul>
 	</div>
 </nav>

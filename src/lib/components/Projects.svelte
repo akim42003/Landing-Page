@@ -13,7 +13,7 @@
 			tech: ['Python', 'MCP', 'Computer Vision', 'LLM']
 		},
 		{
-			title: 'TensorKit-Learn',
+			title: 'tensorkit-learn',
 			description: 'A tensor-based machine learning library built for educational and personal purposes. This Python library provides fundamental ML algorithms and neural network implementations with a focus on learning and experimentation.',
 			link: 'https://github.com/akim42003/tensorkit-learn',
 			tech: ['C++', 'Python', 'Machine Learning', 'Neural Networks']

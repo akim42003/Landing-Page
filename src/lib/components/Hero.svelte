@@ -22,7 +22,7 @@
 <div class="container hero fade-in">
 	<div class="intro">
 		<img
-			src="{base}/headshot.jpeg"
+			src="{base}/lebron.jpg"
 			alt="Alex Kim"
 			class="headshot"
 		/>

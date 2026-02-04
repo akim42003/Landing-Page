@@ -3,6 +3,7 @@
 	import Hero from '$lib/components/Hero.svelte';
 	import About from '$lib/components/About.svelte';
 	import Projects from '$lib/components/Projects.svelte';
+	import Publications from '$lib/components/Publications.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 </script>
 
@@ -21,6 +22,9 @@
 		</section>
 		<section id="projects">
 			<Projects />
+		</section>
+		<section id="publications">
+			<Publications />
 		</section>
 	</main>
 	<Footer />
