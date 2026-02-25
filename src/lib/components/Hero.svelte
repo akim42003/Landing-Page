@@ -77,6 +77,32 @@
                     {/each}
                 </div>
             {/each}
+
+            <h2>Education</h2>
+            <div class="edu-item">
+                <img
+                    src="{base}/icons/duke.png"
+                    alt="Duke University"
+                    class="edu-logo"
+                />
+                <div class="edu-text">
+                    <span class="edu-degree">ECE PhD Candidate</span>
+                    <span class="edu-school">Duke University (2026-2031)</span>
+                </div>
+            </div>
+            <div class="edu-item">
+                <img
+                    src="{base}/icons/hamilton.png"
+                    alt="Hamilton College"
+                    class="edu-logo"
+                />
+                <div class="edu-text">
+                    <span class="edu-degree"
+                        >BA - Mathematics (Music minor)</span
+                    >
+                    <span class="edu-school">Hamilton College (2021-2025)</span>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -110,6 +136,45 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 0.75rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .skills-grid:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .edu-item {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.25rem 0;
+        margin-bottom: 0.25rem;
+    }
+
+    .edu-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .edu-logo {
+        width: 36px;
+        height: 36px;
+        object-fit: contain;
+    }
+
+    .edu-text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .edu-degree {
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: var(--color-text);
+    }
+
+    .edu-school {
+        font-size: 0.8rem;
+        color: var(--color-text-muted);
     }
 
     .skill-item {
@@ -146,8 +211,8 @@
     }
 
     .headshot {
-        width: 100px;
-        height: 100px;
+        width: 190px;
+        height: 190px;
         border-radius: 50%;
         object-fit: cover;
         border: 2px solid var(--color-border);
