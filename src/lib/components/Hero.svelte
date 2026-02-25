@@ -1,205 +1,238 @@
 <script>
-	import { base } from '$app/paths';
+    import { base } from "$app/paths";
 
-	const technologies = [
-		{ name: 'C++', icon: 'cpp.svg' },
-		{ name: 'Python', icon: 'python.svg' },
-		{ name: 'TypeScript', icon: 'typescript.svg' },
-		{ name: 'CUDA', icon: 'cuda.svg' },
-		{ name: 'Linux', icon: 'linux.svg' },
-		{ name: 'Docker', icon: 'docker.svg' },
-		{ name: 'PyTorch', icon: 'pytorch.svg' },
-		{ name: 'OpenCV', icon: 'opencv.svg' },
-		{ name: 'Scikit-Learn', icon: 'scikit-learn.svg' },
-		{ name: 'React/Expo', icon: 'react.svg' },
-		{ name: 'LaTeX', icon: 'latex.svg' },
-		{ name: 'PostgreSQL', icon: 'postgresql.svg' },
-		{ name: 'GitHub', icon: 'github.svg' },
-		{ name: 'Epic EHR', icon: 'epic.svg' }
-	];
+    const skillCategories = [
+        {
+            label: "Languages",
+            items: [
+                { name: "Python", icon: "python.svg" },
+                { name: "C++", icon: "cpp.svg" },
+                { name: "C", icon: "c.svg" },
+                { name: "Go", icon: "go.svg" },
+                { name: "TypeScript", icon: "typescript.svg" },
+                { name: "Java", icon: "java.svg" },
+            ],
+        },
+        {
+            label: "Frameworks",
+            items: [
+                { name: "PyTorch", icon: "pytorch.svg" },
+                { name: "React", icon: "react.svg" },
+                { name: "Svelte", icon: "svelte.svg" },
+                { name: "Scikit-Learn", icon: "scikit-learn.svg" },
+            ],
+        },
+        {
+            label: "Other",
+            items: [
+                { name: "Linux", icon: "linux.svg" },
+                { name: "LaTeX", icon: "latex.svg" },
+            ],
+        },
+    ];
 </script>
 
 <div class="container hero fade-in">
-	<div class="intro">
-		<img
-			src="{base}/lebron.jpg"
-			alt="Alex Kim"
-			class="headshot"
-		/>
-		<div class="intro-text">
-			<h1>Alex Kim</h1>
-			<p class="tagline">Machine Learning & Software Developer</p>
-		</div>
-	</div>
+    <div class="hero-columns">
+        <div class="hero-left">
+            <div class="intro">
+                <img src="{base}/lebron.jpg" alt="Alex Kim" class="headshot" />
+                <div class="intro-text">
+                    <h1>Alex Kim</h1>
+                    <p class="tagline">Machine Learning & Software Developer</p>
+                </div>
+            </div>
 
-	<p class="bio">
-		Hi, I'm Alex! I enjoy building things with data, sports, and math.
-		I create full-stack applications, ML/AI solutions, and electronics
-		to learn, and solve problems across diverse disciplines and research areas.
-	</p>
+            <p class="bio">
+                Hi, I'm Alex! I enjoy building things with data, sports, and
+                math. I create full-stack applications, ML/AI solutions, and
+                electronics to learn, and solve problems across diverse
+                disciplines and research areas.
+            </p>
 
-	<div class="actions">
-		<a href="#projects" class="btn btn-primary">View Projects</a>
-		<a href="{base}/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Resume</a>
-	</div>
+            <div class="actions">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a
+                    href="{base}/resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-secondary">Resume</a
+                >
+            </div>
+        </div>
 
-	<div class="tech-section">
-		<h2>Technologies</h2>
-		<div class="tech-grid">
-			{#each technologies as tech}
-				<div class="tech-item">
-					<img src="{base}/icons/{tech.icon}" alt="{tech.name}" class="tech-icon" />
-					<span class="tech-name">{tech.name}</span>
-				</div>
-			{/each}
-		</div>
-	</div>
+        <div class="hero-right">
+            <h2>Skills</h2>
+            {#each skillCategories as category}
+                <div class="skills-grid">
+                    {#each category.items as skill}
+                        <div class="skill-item">
+                            <img
+                                src="{base}/icons/{skill.icon}"
+                                alt={skill.name}
+                                class="skill-icon"
+                            />
+                            <span class="skill-name">{skill.name}</span>
+                        </div>
+                    {/each}
+                </div>
+            {/each}
+        </div>
+    </div>
 </div>
 
 <style>
-	.hero {
-		padding-top: 2rem;
-	}
+    .hero {
+        padding-top: 2rem;
+    }
 
-	.intro {
-		display: flex;
-		align-items: center;
-		gap: 1.5rem;
-		margin-bottom: 1.5rem;
-	}
+    .hero-columns {
+        display: flex;
+        gap: 3rem;
+        align-items: start;
+    }
 
-	.headshot {
-		width: 100px;
-		height: 100px;
-		border-radius: 50%;
-		object-fit: cover;
-		border: 2px solid var(--color-border);
-	}
+    .hero-left {
+        flex: 1;
+    }
 
-	.intro-text h1 {
-		font-size: 2rem;
-		font-weight: 600;
-		margin-bottom: 0.25rem;
-	}
+    .hero-right {
+        flex: 0 0 auto;
+    }
 
-	.tagline {
-		color: var(--color-text-muted);
-		font-size: 1.05rem;
-	}
+    .hero-right h2 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
 
-	.bio {
-		font-size: 1.1rem;
-		line-height: 1.7;
-		margin-bottom: 1.5rem;
-		max-width: 700px;
-	}
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
 
-	.actions {
-		display: flex;
-		gap: 1rem;
-		margin-bottom: 3rem;
-	}
+    .skill-item {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 0.5rem 0.75rem;
+        border: 1px solid var(--color-border);
+        border-radius: 6px;
+        transition: border-color 0.2s ease;
+    }
 
-	.btn {
-		padding: 0.6rem 1.25rem;
-		border-radius: 6px;
-		font-size: 0.9rem;
-		font-weight: 500;
-		transition: all 0.2s ease;
-	}
+    .skill-item:hover {
+        border-color: #ccc;
+    }
 
-	.btn-primary {
-		background: var(--color-text);
-		color: var(--color-bg);
-	}
+    .skill-icon {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+    }
 
-	.btn-primary:hover {
-		background: #333;
-		color: var(--color-bg);
-	}
+    .skill-name {
+        font-size: 0.85rem;
+        color: var(--color-text-muted);
+        white-space: nowrap;
+    }
 
-	.btn-secondary {
-		border: 1px solid var(--color-border);
-		color: var(--color-text);
-	}
+    .intro {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
 
-	.btn-secondary:hover {
-		border-color: var(--color-text);
-	}
+    .headshot {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid var(--color-border);
+    }
 
-	.tech-section h2 {
-		font-size: 1.25rem;
-		font-weight: 600;
-		margin-bottom: 1.5rem;
-	}
+    .intro-text h1 {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+    }
 
-	.tech-grid {
-		display: grid;
-		grid-template-columns: repeat(7, 1fr);
-		gap: 1.5rem;
-		max-width: 900px;
-	}
+    .tagline {
+        color: var(--color-text-muted);
+        font-size: 1.05rem;
+    }
 
-	.tech-item {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 0.5rem;
-		padding: 1rem;
-		border: 1px solid var(--color-border);
-		border-radius: 8px;
-		transition: all 0.2s ease;
-	}
+    .bio {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+        max-width: 700px;
+    }
 
-	.tech-item:hover {
-		border-color: #ccc;
-		transform: translateY(-2px);
-	}
+    .actions {
+        display: flex;
+        gap: 1rem;
+    }
 
-	.tech-icon {
-		width: 48px;
-		height: 48px;
-		object-fit: contain;
-	}
+    .btn {
+        padding: 0.6rem 1.25rem;
+        border-radius: 6px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        transition: all 0.2s ease;
+    }
 
-	.tech-name {
-		font-size: 0.75rem;
-		color: var(--color-text-muted);
-		text-align: center;
-	}
+    .btn-primary {
+        background: var(--color-text);
+        color: var(--color-bg);
+    }
 
-	@media (max-width: 900px) {
-		.tech-grid {
-			grid-template-columns: repeat(4, 1fr);
-		}
-	}
+    .btn-primary:hover {
+        background: #333;
+        color: var(--color-bg);
+    }
 
-	@media (max-width: 600px) {
-		.intro {
-			flex-direction: column;
-			text-align: center;
-		}
+    .btn-secondary {
+        border: 1px solid var(--color-border);
+        color: var(--color-text);
+    }
 
-		.actions {
-			flex-direction: column;
-		}
+    .btn-secondary:hover {
+        border-color: var(--color-text);
+    }
 
-		.btn {
-			text-align: center;
-		}
+    @media (max-width: 768px) {
+        .hero-columns {
+            flex-direction: column;
+        }
 
-		.tech-grid {
-			grid-template-columns: repeat(2, 1fr);
-			gap: 1rem;
-		}
+        .hero-right {
+            width: 100%;
+        }
 
-		.tech-item {
-			padding: 0.75rem;
-		}
+        .skills-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
 
-		.tech-icon {
-			width: 36px;
-			height: 36px;
-		}
-	}
+    @media (max-width: 600px) {
+        .intro {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .actions {
+            flex-direction: column;
+        }
+
+        .btn {
+            text-align: center;
+        }
+
+        .skills-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
 </style>
