@@ -39,16 +39,15 @@
                 <img src="{base}/lebron.jpg" alt="Alex Kim" class="headshot" />
                 <div class="intro-text">
                     <h1>Alex Kim</h1>
-                    <p class="tagline">Machine Learning & Software Developer</p>
+                    <p class="tagline">PhD Student at Duke University</p>
                 </div>
             </div>
 
             <p class="bio">
-                Hi, I'm Alex! I enjoy building things with data, sports, and
-                math. I create full-stack applications, ML/AI solutions, and
-                electronics to learn, and solve problems across diverse
-                disciplines and research areas.
-            </p>
+               I'm an Electrical and Computer Engineering PhD Candidate in the Kamaleswaran
+		Lab at <strong> Duke University</strong>. In 2025, I graduated from <strong>
+		Hamilton College</strong> with my Bachelors in Mathematics and a minor in Music. I'm interested in clinical applications of AI/ML, interpretability of language models, multi-agent interoperability, and the topology and geometry of latent spaces. 
+                       </p>
 
             <div class="actions">
                 <a href="#projects" class="btn btn-primary">View Projects</a>

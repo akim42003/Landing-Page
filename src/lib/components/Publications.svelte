@@ -52,9 +52,9 @@
 </script>
 
 <div class="container publications fade-in">
-	<h2>Publications</h2>
+	<h2>Academic Papers</h2>
 	<p class="publications-intro">
-		Research contributions and academic work
+		Publications and pre-prints in reverse chronological order.
 	</p>
 
 	<div class="publications-list">
