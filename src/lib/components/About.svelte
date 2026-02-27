@@ -10,52 +10,46 @@
     <div class="about-grid">
         <div class="about-content">
             <p>
-                Currently, I'm a senior at <strong>Hamilton College</strong> studying
-                Mathematics and Music. Ever since I can remember, I've had a passion
-                for creating things—whether it's through music, legos, or lines of
-                code.
+		I earned my BA in Mathematics (Music minor) from <strong>Hamilton College</strong> in 2025. Some of my favorite courses were Graph Theory, Modern Algebra and Advanced Linear Algebra. As an undergrad, I was a research intern at the <a href = "https://www.musculoskeletal.ai/">Musculoskeletal Informatics Group</a> at <strong>Boston Children's Hospital</strong> led by Dr. Ata Kiapour, and lead an indepdentent research project for the music department as an <strong> Emerson Fellow</strong> in 2024. 
             </p>
-
-            <p>
-                I first discovered the possibilities of machine learning during
-                my internship at the
-                <strong
-                    >Boston Children's Hospital Musculoskeletal Informatics
-                    Group</strong
-                >.
-            </p>
+	<p> After undergrad, I moved to Madison Wisconsin where I worked at <strong>Epic Systems</strong> and took courses at <strong>UW-Madison</strong> in the mathematics and computer-science departments.
+	</p>
+	<p>
+                        In my freetime, I enjoy basketball,
+                        skateboarding, cooking and reading and writing for my <a href = "https://blog.alexmkim.io/">blog</a>.
+                    </p>
+	
 
             {#if showMore}
                 <div class="more-content">
                     <p>
-                        As a Data Science Intern, I helped process and verify
+                        My first year at MIG, I helped process and verify
                         dataset quality and wrote image feature extraction
                         programs as my first experience with computer vision. I
                         got to see ML's impact in healthcare, contributing to 3D
-                        model segmentation pipelines and NLP treatment planning
-                        projects.
+                        model segmentation pipelines and the InterDAPT framework which was eventually published in <strong> ACL Anthology </strong>.
                     </p>
 
                     <p>
-                        I returned the next year with the startup <strong
+                        I returned the next year with the labs startup arm <strong
                             >BonePixel</strong
                         >, writing 3D modeling algorithms. This experience led
                         me to explore personal projects through hackathons and
-                        experiments with computer vision.
+                        experiments with computer vision and NBA game footage.
+
                     </p>
 
                     <p>
                         I was granted an <strong>Emerson Fellowship</strong> for summer
-                        2024, developing a vocal register classification pipeline
+                        2024, which funded the development of a vocal register classification pipeline
                         with a musician-friendly GUI. This tool helps singers understand
                         and apply technique, particularly useful for my acapella group,
                         The Buffers.
                     </p>
-
-                    <p>
-                        Outside of STEM and music, I enjoy basketball,
-                        skateboarding, cooking with family, and crocheting.
-                    </p>
+		<p> After graduation, I worked as an Implementation Specialist at <strong> Epic Systems </strong>. This role expanded my view of how clinicians actually interact with technology and will continue to inform how I approach applied research in medical domains. 
+		</p>
+		<p> While in Wisconsin, I also took at <strong>UW-Madison</strong> in multi-agent ML systems, measure and integration theory, theory of data science (concentration, high dimensional geometry, convex optimization, etc) and data structures and algorithms. 
+		</p>
                 </div>
             {/if}
 

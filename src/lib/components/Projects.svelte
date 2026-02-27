@@ -1,13 +1,6 @@
 <script>
     const projects = [
-        {
-            title: "LIOS--LLM Integrated OS",
-            description:
-                "Unix-based and domain targeted for local LLM's, LIOS is my attempt to refine my computer architecture and C skills in a fun way. Status: Under construction.",
-            link: "https://github.com/akim42003/LIOS--LLM-Integrated-OS",
-            tech: ["Assembly", "C", "QEMU", "Computer Architecture"],
-        },
-        {
+                {
             title: "SOFIA",
             description:
                 "A local computer use agent that automates desktop interactions and tasks through intelligent tool calling and OCR. This AI-powered assistant can perform complex computer operations, file management, and application control to enhance productivity and streamline workflows.",
@@ -24,16 +17,42 @@
         {
             title: "AVRA - Automatic Vocal Register Analysis",
             description:
-                "A full-stack application that allows musicians of all levels to further their understanding and application of vocal technique. Built during summer 2024 through an Emerson Foundation grant, this project combines computer vision and machine learning to create a vocal register classifier using spectrograms with SVM and CNN models.",
+        "A full-stack application that allows musicians to further their understanding of vocal technique. Built during summer 2024 through an Emerson Foundation grant, this project combines computer vision and machine learning to create a vocal register classifier using spectrograms with SVM and CNN models.",
             link: "https://github.com/akim42003/AVRA",
-            tech: ["TypeScript", "React-Native", "Xcode"],
+            tech: ["Pytorch", "React", "scikit-learn"],
         },
+	    { 
+		    title: "casteroids",
+		    description:
+		    " Little asteroids game in C. Uses raylib for graphics",
+		    link: "https://github.com/akim42003/casteroids",
+		    tech: ["C", "raylib"],
+		    },
+	{
+		    title: "braindump",
+		    description: "My self hosted digital journal using postgres and nginx for backend and vanilla js + html + css for the frontent. Hosted on my middle school pc",
+		    link: "https://github.com/akim42003/braindump",
+		    tech: ["old school web dev stack"],
+		    },
+	    {
+		    title: "idea_buckets",
+		    description: "My public blog. Made with svelte for a nice reading experience with sveltex markdown + latex compiler",
+		    link: "https://blog.alexmkim.io",
+		    tech: ["Svelte"],
+		    },
+	    {
+		    title: "alexkode",
+		    description: "A tui for my ML/DL coding problems repository since repls online are slow sometimes and I get bored on plane rides. Built with bubbletea",
+		    link:"https://github.com/akim42003/alexkode",
+		    tech: ["Go"],
+		    },
+
         {
             title: "HandyFit",
             description:
-                "Now on the App Store! A local calorie tracking application that harnesses computer vision to assess the nutritional content of meals. Users can analyze food images to automatically calculate calories, macronutrients, and dietary information, making nutrition tracking effortless and accurate.",
+                "Now on the App Store. Users use their bodily dimensions to calculate calories from USDA API based on proportions of serving size to fist, pinky, etc. Workout tracking is stored in json and designed for granularity with manual input of weird exercise names, notes, etc.", 
             link: "https://github.com/akim42003/HandyFit",
-            tech: ["Python", "Computer Vision", "iOS"],
+            tech: ["TypeScript", "React-Native", "iOS"],
         },
         {
             title: "PlayCaller.ai",
@@ -66,7 +85,7 @@
         {
             title: "NBA Prospect Potential",
             description:
-                "Comprehensive NBA analytics project built for CS 307. Implements advanced statistical analysis, player performance metrics, and predictive modeling for basketball data insights and team strategy optimization.",
+                "NBA analytics project built for CS 307. Implements advanced statistical analysis, player performance metrics, and predictive modeling for basketball data insights and team strategy optimization.",
             link: "https://github.com/akim42003/nba-prospect-potential",
             tech: ["Python", "Scikit-Learn", "Neural Networks"],
         },
@@ -77,6 +96,12 @@
             link: "https://github.com/akim42003/Flappy-Bird-Free-For-All",
             tech: ["Python", "Deep Learning", "RL"],
         },
+	    {
+	    title: "hearts-cpp",
+		    description: "A text based hearts card game that uses a stack for shuffling and dealing.",
+		    link: "https://github.com/akim42003/hearts-cpp",
+		    tech: ["C++"],
+	    },
     ];
 
     let showMore = false;

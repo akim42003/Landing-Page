@@ -1,6 +1,6 @@
 <script>
 	const contacts = [
-		{ label: 'Email', value: 'akim42003@gmail.com', href: 'mailto:akim42003@gmail.com' },
+		{ label: 'Email', value: 'alexander.kim.417@gmail.com', href: 'alexander.kim.417@gmail.com' },
 		{ label: 'Phone', value: '617-659-0691', href: 'tel:617-659-0691' },
 		{ label: 'LinkedIn', value: 'linkedin.com/in/akim42003', href: 'https://www.linkedin.com/in/akim42003' },
 		{ label: 'GitHub', value: 'github.com/akim42003', href: 'https://github.com/akim42003' }

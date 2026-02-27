@@ -44,18 +44,20 @@
             </div>
 
             <p class="bio">
-               I'm an Electrical and Computer Engineering PhD Candidate in the Kamaleswaran
-		Lab at <strong> Duke University</strong>. In 2025, I graduated from <strong>
-		Hamilton College</strong> with my Bachelors in Mathematics and a minor in Music. I'm interested in clinical applications of AI/ML, interpretability of language models, multi-agent interoperability, and the topology and geometry of latent spaces. 
+               I'm an incoming Electrical and Computer Engineering PhD Candidate and research assistant in the <a href = "https://www.kamaleswaran.com/"> Kamaleswaran Lab</a>
+		 at <strong> Duke University</strong>.  
+		</p>
+		<p class = "bio">
+		I'm interested in clinical applications and interpretability of foundation models, multi-agent interoperability, and the topology and geometry of latent spaces.
                        </p>
 
             <div class="actions">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="https://github.com/akim42003" class="btn btn-primary">Github</a>
                 <a
-                    href="{base}/resume.pdf"
+                    href="{base}/cv.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="btn btn-secondary">Resume</a
+                    class="btn btn-secondary">Academic CV</a
                 >
             </div>
         </div>

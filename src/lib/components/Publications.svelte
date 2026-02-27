@@ -13,7 +13,7 @@
 			id: 2,
 			title: 'Machine Learning Approaches to Vocal Register Classification in Contemporary Male Pop Music',
 			authors: 'Alexander Kim, Charlotte Botha',
-			venue: 'Journal of New Music Research (submitted)',
+		venue: 'arXiv',
 			year: '2025',
 			link: 'https://arxiv.org/abs/2505.11378',
 			description: 'Methods for classifying vocal registers in male pop music audio signals using mel-spectrogram image analysis. Introduces AVRA (Automatic Vocal Register Analysis) software using SVM and CNN models for consistent vocal register classification.'
