@@ -30,7 +30,7 @@
                         the potential of ML in healthcare, as well as the impact of academic research. In particular, the InterDAPT weakly-supervised finetuning framework was eventually published in <strong> ACL Anthology</strong> with clinical results published in <strong> AJSM.</strong>
                     </p>
 		                    <p>
-                        I returned the next year with the labs startup arm <strong
+                        I returned the next year with the lab's startup arm <strong
                             >BonePixel</strong
                         >, writing 3D modeling algorithms. This experience led
                         me to explore personal projects through hackathons and
