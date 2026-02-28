@@ -38,7 +38,7 @@
             <div class="intro">
                 <img src="{base}/lebron.jpg" alt="Alex Kim" class="headshot" />
                 <div class="intro-text">
-                    <h1>Alex Kim</h1>
+                    <h1>Alexander Kim</h1>
                     <p class="tagline">PhD Student at Duke University</p>
                 </div>
             </div>
@@ -116,7 +116,7 @@
     .hero-columns {
         display: flex;
         gap: 3rem;
-        align-items: start;
+        align-items: center;
     }
 
     .hero-left {

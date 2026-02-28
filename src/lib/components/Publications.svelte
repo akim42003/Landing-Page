@@ -74,7 +74,7 @@
 				</div>
 				<p>{pub.description}</p>
 				<a href={pub.link} target="_blank" rel="noopener noreferrer" class="read-link">
-					Read Publication →
+					Read Paper →
 				</a>
 			</article>
 		{/each}

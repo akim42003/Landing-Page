@@ -14,7 +14,7 @@
 
 <nav class="navbar">
     <div class="container nav-container">
-        <a href="{base}/" class="logo">Alex Kim</a>
+        <a href="{base}/" class="logo">Alexander Kim</a>
 
         <button
             class="menu-toggle"

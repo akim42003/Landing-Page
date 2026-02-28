@@ -10,7 +10,7 @@
     <div class="about-grid">
         <div class="about-content">
             <p>
-		I earned my BA in Mathematics (Music minor) from <strong>Hamilton College</strong> in 2025. Some of my favorite courses were Graph Theory, Modern Algebra and Advanced Linear Algebra. As an undergrad, I was a research intern at the <a href = "https://www.musculoskeletal.ai/">Musculoskeletal Informatics Group</a> at <strong>Boston Children's Hospital</strong> led by Dr. Ata Kiapour, and lead an indepdentent research project for the music department as an <strong> Emerson Fellow</strong> in 2024. 
+		I earned my BA in Mathematics from <strong>Hamilton College</strong> in 2025. Some of my favorite courses were Graph Theory, Modern Algebra and Advanced Linear Algebra. As an undergrad, I was a research intern at the <a href = "https://www.musculoskeletal.ai/">Musculoskeletal Informatics Group</a> at <strong>Boston Children's Hospital</strong> led by Dr. Ata Kiapour, and lead an indepdentent research project for the music department as an <strong> Emerson Fellow</strong> in 2024. 
             </p>
 	<p> After undergrad, I moved to Madison Wisconsin where I worked at <strong>Epic Systems</strong> and took courses at <strong>UW-Madison</strong> in the mathematics and computer-science departments.
 	</p>
@@ -22,15 +22,14 @@
 
             {#if showMore}
                 <div class="more-content">
+		<span class="date-marker">--2022-2023</span>
                     <p>
                         My first year at MIG, I helped process and verify
-                        dataset quality and wrote image feature extraction
-                        programs as my first experience with computer vision. I
-                        got to see ML's impact in healthcare, contributing to 3D
-                        model segmentation pipelines and the InterDAPT framework which was eventually published in <strong> ACL Anthology </strong>.
+                        data pipelines for our CT/MRI-Mesh Segmentation and NLP projects. I also worked on an image feature extraction
+                        script as my first experience with computer vision. This initial exposure showed me 
+                        the potential of ML in healthcare, as well as the impact of academic research. In particular, the InterDAPT weakly-supervised finetuning framework was eventually published in <strong> ACL Anthology</strong> with clinical results published in <strong> AJSM.</strong>
                     </p>
-
-                    <p>
+		                    <p>
                         I returned the next year with the labs startup arm <strong
                             >BonePixel</strong
                         >, writing 3D modeling algorithms. This experience led
@@ -38,6 +37,7 @@
                         experiments with computer vision and NBA game footage.
 
                     </p>
+			<span class="date-marker">--2024-2025</span>
 
                     <p>
                         I was granted an <strong>Emerson Fellowship</strong> for summer
@@ -46,9 +46,11 @@
                         and apply technique, particularly useful for my acapella group,
                         The Buffers.
                     </p>
+		<p> During the first half of 2025, I created a tensor-based ML library based in C++ and began work on a computer use agent project I call SOFIA. By August, SOFIA could search operate my desktop (not a VM) with computer use to an elementary degree and had various file manipulation/CLI capabilities that made for a neat demo!
+		<span class="date-marker">--2025-2026</span>
 		<p> After graduation, I worked as an Implementation Specialist at <strong> Epic Systems </strong>. This role expanded my view of how clinicians actually interact with technology and will continue to inform how I approach applied research in medical domains. 
 		</p>
-		<p> While in Wisconsin, I also took at <strong>UW-Madison</strong> in multi-agent ML systems, measure and integration theory, theory of data science (concentration, high dimensional geometry, convex optimization, etc) and data structures and algorithms. 
+		<p> While in Wisconsin, I also took a mix of graduate and undergraduate courses at <strong>UW-Madison</strong> in multi-agent ML systems, measure and integration theory, theory of data science (concentration, high dimensional geometry, convex optimization, etc) and data structures and algorithms. 
 		</p>
                 </div>
             {/if}
@@ -99,6 +101,16 @@
 
     .more-content {
         animation: fadeIn 0.3s ease-out;
+    }
+
+    .date-marker {
+        display: block;
+        font-family: monospace;
+        font-size: 0.85rem;
+        color: var(--color-accent);
+        letter-spacing: 0.05em;
+        margin-top: 1.25rem;
+        margin-bottom: 0.25rem;
     }
 
     @keyframes fadeIn {
