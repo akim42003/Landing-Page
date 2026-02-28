@@ -48,7 +48,7 @@
 		 at <strong> Duke University</strong>.  
 		</p>
 		<p class = "bio">
-		I'm interested in clinical applications and interpretability of foundation models, multi-agent interoperability, and the topology and geometry of latent spaces.
+		During graduate school, I want to research clinical applications and interpretability of foundation models, multi-agent interoperability, and tinker with my side interest in the topology and geometry of latent spaces.
                        </p>
 
             <div class="actions">
