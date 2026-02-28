@@ -17,9 +17,9 @@
             label: "Frameworks",
             items: [
                 { name: "PyTorch", icon: "pytorch.svg" },
-                { name: "React", icon: "react.svg" },
-                { name: "Svelte", icon: "svelte.svg" },
                 { name: "Scikit-Learn", icon: "scikit-learn.svg" },
+                { name: "Svelte", icon: "svelte.svg" },
+                { name: "React", icon: "react.svg" },
             ],
         },
         {
@@ -53,6 +53,7 @@
 
             <div class="actions">
                 <a href="https://github.com/akim42003" class="btn btn-primary">Github</a>
+		<a href = "https://scholar.google.com/citations?hl=en&user=_fNDBFgAAAAJ" class = "btn btn-secondary">Google Scholar</a>
                 <a
                     href="{base}/cv.pdf"
                     target="_blank"
