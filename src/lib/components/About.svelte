@@ -1,5 +1,6 @@
 <script>
     import { base } from "$app/paths";
+    import { slide } from "svelte/transition";
 
     let showMore = false;
 </script>
@@ -21,7 +22,7 @@
 	
 
             {#if showMore}
-                <div class="more-content">
+                <div class="more-content" transition:slide={{ duration: 300 }}>
 		<span class="date-marker">--2022-2023</span>
                     <p>
                         My first year at MIG, I helped process and verify
@@ -158,6 +159,9 @@
 
         .about-image-container {
             order: -1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .about-image {
