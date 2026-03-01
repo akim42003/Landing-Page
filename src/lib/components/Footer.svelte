@@ -27,7 +27,7 @@
 		</div>
 
 		<div class="footer-bottom">
-			<p>&copy; February 2026 Alex Kim. Built with SvelteKit.</p>
+			<p>&copy; March 2026 Alex Kim. Built with SvelteKit.</p>
 		</div>
 	</div>
 </footer>

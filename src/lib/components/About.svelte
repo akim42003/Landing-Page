@@ -1,15 +1,22 @@
 <script>
     import { base } from "$app/paths";
     import { slide } from "svelte/transition";
+    import { onMount } from "svelte";
 
     let showMore = false;
+    let collapsedHeight = 0;
+    let contentEl;
+
+    onMount(() => {
+        collapsedHeight = contentEl.clientHeight;
+    });
 </script>
 
 <div class="container about fade-in">
     <h2>About</h2>
 
     <div class="about-grid">
-        <div class="about-content">
+        <div class="about-content" bind:this={contentEl}>
             <p>
 		I earned my BA in Mathematics from <strong>Hamilton College</strong> in 2025. Some of my favorite courses were Graph Theory, Modern Algebra and Advanced Linear Algebra. As an undergrad, I was a research intern at the <a href = "https://www.musculoskeletal.ai/">Musculoskeletal Informatics Group</a> at <strong>Boston Children's Hospital</strong> led by Dr. Ata Kiapour, and lead an indepdentent research project for the music department as an <strong> Emerson Fellow</strong> in 2024. 
             </p>
@@ -64,7 +71,7 @@
             </button>
         </div>
 
-        <div class="about-image-container">
+        <div class="about-image-container" style="height: {collapsedHeight || 'auto'}px;">
             <img src="{base}/selfie.jpeg" alt="Alex Kim" class="about-image" />
             <p class="image-caption">DGX Station at BCH MIG 2021</p>
         </div>
@@ -139,6 +146,8 @@
 
     .about-image {
         width: 100%;
+        height: 100%;
+        object-fit: cover;
         border-radius: 8px;
         border: 1px solid var(--color-border);
     }
