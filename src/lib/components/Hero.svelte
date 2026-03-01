@@ -186,7 +186,7 @@
 
     @media (max-width: 600px) {
         .hero-right {
-            text-align: center;
+            text-align: left;
         }
     }
 </style>

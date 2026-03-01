@@ -174,7 +174,10 @@
         }
 
         .about-image {
-            max-width: 250px;
+            max-width: 100%;
+            height: 300px;
+            object-fit: cover;
+            object-position: top;
         }
     }
 </style>
