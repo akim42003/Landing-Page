@@ -25,7 +25,7 @@
             <h1>Alexander Kim</h1>
 
             <p class="bio">
-                I'm an incoming Electrical and Computer Engineering PhD Candidate in the <a href="https://www.kamaleswaran.com/">Kamaleswaran Lab</a>
+                I'm an Electrical and Computer Engineering PhD Student in the <a href="https://www.kamaleswaran.com/">Kamaleswaran Lab</a>
                 at <strong>Duke University</strong>.
             </p>
             <p class="bio">
@@ -47,7 +47,7 @@
                 <div class="edu-item">
                     <img src="{base}/icons/duke.png" alt="Duke University" class="edu-logo" />
                     <div class="edu-text">
-                        <span class="edu-degree">ECE PhD Candidate</span>
+                        <span class="edu-degree">ECE PhD Student</span>
                         <span class="edu-school">Duke University (2026-2031)</span>
                     </div>
                 </div>
