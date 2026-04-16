@@ -13,7 +13,7 @@
             <p>
 		I earned my BA in Mathematics from <strong>Hamilton College</strong> in 2025. Some of my favorite courses were Graph Theory, Modern Algebra and Advanced Linear Algebra. As an undergrad, I was a research intern at the <a href = "https://www.musculoskeletal.ai/">Musculoskeletal Informatics Group</a> at <strong>Boston Children's Hospital</strong> led by Dr. Ata Kiapour, and lead an indepdentent research project for the music department as an <strong> Emerson Fellow</strong> in 2024. 
             </p>
-	<p> After undergrad, I moved to Madison Wisconsin where I worked at <strong>Epic Systems</strong> and took courses at <strong>UW-Madison</strong> in the mathematics and computer-science departments.
+	<p> After undergrad, I moved to Madison Wisconsin where I worked at <strong>Epic Systems</strong> and took courses at <strong>UW-Madison</strong> in the mathematics and computer-science departments where I thoroughly enjoyed Measure Theory and studying geometry in data science.
 	</p>
 	<p>
                         In my freetime, I enjoy basketball,
